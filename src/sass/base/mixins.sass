@@ -1,0 +1,93 @@
+// responsive
+
+//$wide: 1366
+//$note: 1024
+//$tablet: 768
+//$mobile: 568
+//$mobile-s: 413
+
+=r($width)
+  @media only screen and (max-width: $width+ "px")
+    @content
+=rw
+  @media only screen and (max-width: 1366px)
+    @content
+=rn
+  @media only screen and (max-width: 1024px)
+    @content
+=rt
+  @media only screen and (max-width: 768px)
+    @content
+=rm
+  @media only screen and (max-width: 568px)
+    @content
+=rms
+  @media only screen and (max-width: 413px)
+    @content
+
+// helpers
+
+=b
+  border: solid 1px red
+=bb
+  border: solid 1px blue
+
+// - - - - -
+
+=zero
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+  margin: auto
+
+=psevdo
+  position: relative
+  &:before,&:after
+    content: ''
+    position: absolute
+
+=vcenter
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+
+=tr
+  transition: all .3s ease
+
+//triangle
+
+=arr($width, $height, $bg, $direction)
+  width: 0px
+  height: 0px
+  border-style: solid
+  @if $direction == t
+    border-width: 0 $width / 2 + px $height + px $width / 2 + px
+    border-color: transparent transparent $bg transparent
+  @if $direction == r
+    border-width: $height / 2 + px 0 $height / 2 + px $width + px
+    border-color: transparent transparent transparent $bg
+  @if $direction == b
+    border-width: $height + px $width / 2 + px 0 $width / 2 + px
+    border-color: $bg transparent transparent transparent
+  @if $direction == l
+    border-width: $height / 2 + px $width + px $height / 2 + px 0
+    border-color: transparent $bg transparent transparent
+  @if $direction == tl
+    border-width: $height + px $width + px 0 0
+    border-color: $bg transparent transparent transparent
+  @if $direction == tr
+    border-width: 0 $width + px $height + px 0
+    border-color: transparent $bg transparent transparent
+  @if $direction == br
+    border-width: 0 0 $height + px $width + px
+    border-color: transparent transparent $bg transparent
+  @if $direction == bl
+    border-width: $width + px 0 0 $height + px
+    border-color: transparent transparent transparent $bg
+
+// example
+// +arr(500,50, #000, l)
+// +arr(500,50, #000, bl)
+

@@ -1,0 +1,26 @@
+// colors
+
+$sky-col: #ebf6fd
+$sky-col-dark: #c9e1ee
+
+$font-col: #9299a4
+$font-blue: #15489e
+
+$main-col: #ff4716
+$main-col-dark: #de3e13
+
+// fonts
+
+=main-font
+  font-family: 'proximanova', Helvetica, sans-serif
+
+=font-face($font-family, $file-path, $weight: normal, $style: normal)
+  @font-face
+    font-family: $font-family
+    src: url('#{$file-path}.woff2') format('woff2'), url('#{$file-path}.woff') format('woff')
+    font-weight: $weight
+    font-style: $style
+
++font-face('proximanova', '../fonts/proximanova-regular-webfont', 400)
++font-face('proximanova', '../fonts/proximanova-bold-webfont', 700)
+

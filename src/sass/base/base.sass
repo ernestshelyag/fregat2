@@ -1,0 +1,106 @@
+$browser-context: 16 // Default
+
+@function em($pixels, $context: $browser-context)
+  @return #{$pixels/$context}em
+
+@function rem($size)
+  @return ($size/16)+rem
+
+*, *:before, *:after
+  box-sizing: border-box
+  outline: none
+
+*::selection
+  background: rgba($main-col, .8)
+  color: white
+
+html
+  text-size-adjust: none
+  font-size: 16px
+
+
+#preloader
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  z-index: 10000
+  background: #fff
+
+body
+  +main-font
+  position: relative
+  min-width: 320px
+  color: $font-col
+  overflow-x: hidden
+  //letter-spacing: 2px
+
+a
+  +tr
+  display: inline-block
+  color: $font-col
+  &:hover
+    color: $main-col
+
+p
+  line-height: 1.33
+  +rt
+    font-size: 14px
+  +rm
+    font-size: 12px
+
+svg
+  transition: fill .3s ease
+
+// forms
+
+input, button
+  +main-font
+  border: none
+  background: transparent
+
+button
+  cursor: pointer
+
+=placeholder-color($color, $opacity)
+  &::-webkit-input-placeholder  /* WebKit browsers */
+      color: $color
+      opacity: $opacity
+      text-transform: uppercase
+  &:-moz-placeholder  /* Mozilla Firefox 4 to 18 */
+      color: $color
+      opacity: $opacity
+      text-transform: uppercase
+  &::-moz-placeholder  /* Mozilla Firefox 19+ */
+      color: $color
+      opacity: $opacity
+      text-transform: uppercase
+  &:-ms-input-placeholder  /* Internet Explorer 10+ */
+      color: $color
+      opacity: $opacity
+      text-transform: uppercase
+
++placeholder-color($font-col, 0.8)
+
+// wrapper
+
+=wrp
+  max-width: 1340px
+  margin: 0 auto
+  padding: 0 40px
+  +rt
+    max-width: 715px
+    padding: 0 15px
+.wrp
+  +wrp
+
+// body-flex (footer to bottom)
+
+.body-flex
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+.main-flex
+  flex-grow: 1
