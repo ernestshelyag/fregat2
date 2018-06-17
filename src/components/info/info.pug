@@ -1,0 +1,42 @@
+-
+    var mainInfo = [
+        {
+            "icon": "stairs",
+            "title": "Наружные лестницы",
+            "text": "и удобные пешеходные связи"
+        },
+        {
+            "icon": "swing",
+            "title": "Детские и спортивные площадки",
+            "text": "с ковровым резиновым покрытием, свой скейт-парк"
+        },
+        {
+            "icon": "flower",
+            "title": "Газоны с цветами",
+            "text": "декоративные травы и живые изгороди"
+        },
+        {
+            "icon": "parking",
+            "title": "Надземная парковка ",
+            "text": "на 298 машиномест"
+        },
+        {
+            "icon": "sign",
+            "title": "2 механизированные автостоянки ",
+            "text": "в 8 уровней на 300 и 150 мест"
+        },
+        {
+            "icon": "car",
+            "title": "Открытый паркинг",
+            "text": "для гостевых машин на 350 машиномест"
+        }
+    ]
+
++b.SECTION.info
+    +e.wrp.wrp
+        +e.UL.list
+            each item in mainInfo
+                +e.LI.item
+                    +icon(item.icon)
+                    +e.H4.title= item.title
+                    +e.P.text= item.text

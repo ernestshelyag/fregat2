@@ -6,7 +6,7 @@
 <filter filterUnits="userSpaceOnUse" id="Filter_0" x="0px" y="0px" width="69px" height="69px"  >
     <feOffset in="SourceAlpha" dx="0" dy="5" />
     <feGaussianBlur result="blurOut" stdDeviation="4.899" />
-    <feFlood flood-color="rgb(47, 204, 198)" result="floodOut" />
+    <feFlood flood-color="rgb(255, 74, 25)" result="floodOut" />
     <feComposite operator="atop" in="floodOut" in2="blurOut" />
     <feComponentTransfer><feFuncA type="linear" slope="0.3"/></feComponentTransfer>
     <feMerge>
@@ -17,7 +17,7 @@
 <filter filterUnits="userSpaceOnUse" id="Filter_1" x="0px" y="0px" width="95px" height="95px"  >
     <feOffset in="SourceAlpha" dx="0" dy="5" />
     <feGaussianBlur result="blurOut" stdDeviation="4.899" />
-    <feFlood flood-color="rgb(19, 146, 141)" result="floodOut" />
+    <feFlood flood-color="rgb(255, 74, 25)" result="floodOut" />
     <feComposite operator="atop" in="floodOut" in2="blurOut" />
     <feComponentTransfer><feFuncA type="linear" slope="0.48"/></feComponentTransfer>
     <feMerge>
@@ -26,7 +26,7 @@
   </feMerge>
 </filter>
 </defs>
-<circle filter="url(#Filter_1)" cx="40" cy="40" r="30" fill="#2fccc6"/>
+<circle filter="url(#Filter_1)" cx="40" cy="40" r="30" fill="#ff4716"/>
 <circle filter="url(#Filter_0)" cx="40" cy="40" r="15" fill="#ffffff"/>
 
 </svg>

@@ -1,2 +1,37 @@
 .footer
   display: block
+  &__bottom
+    margin-top: 8px
+    height: 35px
+    background: rgba($font-col, .1)
+    +r(880)
+      margin-top: 0
+    +rm
+      height: auto
+      padding: 10px 0
+  &__wrp
+    height: 100%
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +rm
+      flex-direction: column
+  &__policy
+    color: $font-col
+    font-size: 14px
+    text-decoration: none
+    +rm
+      margin-bottom: 5px
+  &__markello
+    text-decoration: none
+  &__img
+    position: relative
+    top: 3px
+  &__text
+    margin-left: 10px
+    text-transform: uppercase
+    font-size: 14px
+    color: $main-col
+    font-weight: bold
+
+  

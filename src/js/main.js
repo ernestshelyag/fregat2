@@ -6,12 +6,10 @@ $(function () {
 
   header();
 
+  aboutSlider();
+
+  sendForm();
+
   svg4everybody();
 
 });
-
-let ass = () => {
-  console.log('ass');
-};
-
-ass();

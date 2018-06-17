@@ -1,2 +1,79 @@
-+b.HEADER.header
-    span header
+-
+    var headerNavTop = [
+        { "text": "О нас", "link": "#" },
+        { "text": "Ипотека", "link": "#" },
+        { "text": "Акции", "link": "#" },
+        { "text": "Партнёры", "link": "#" },
+        { "text": "Вопрос-ответ", "link": "#" },
+        { "text": "Отзывы", "link": "#" },
+        { "text": "Блог", "link": "#" },
+        { "text": "Новости", "link": "#" },
+        { "text": "Контакты", "link": "#" }
+    ]
+    var headerSocials = [
+        { "icon": "insta", "link": "#" },
+        { "icon": "fb", "link": "#" },
+        { "icon": "vk", "link": "#" },
+        { "icon": "ok", "link": "#" }
+    ]
+    var headerNavBottom = [
+        { "text": "О ЖК Фрегат", "link": "#" },
+        { "text": "Посмотреть квартиры", "link": "#" },
+        { "text": "Ход строительства", "link": "#" },
+        { "text": "Как купить", "link": "#" },
+        { "text": "8 (423) 202-50-09", "link": "tel:84232025009" }
+    ]
+    var sidebar = [
+        { "text": "Главная", "link": "/" },
+        { "text": "О нас", "link": "#" },
+        { "text": "Ипотека", "link": "#" },
+        { "text": "Акции", "link": "#" },
+        { "text": "Партнёры", "link": "#" },
+        { "text": "Вопрос-ответ", "link": "#" },
+        { "text": "Отзывы", "link": "#" },
+        { "text": "Блог", "link": "#" },
+        { "text": "Новости", "link": "#" },
+        { "text": "Контакты", "link": "#" },
+        { "text": "О ЖК Фрегат", "link": "#" },
+        { "text": "Посмотреть квартиры", "link": "#" },
+        { "text": "Ход строительства", "link": "#" },
+        { "text": "Как купить", "link": "#" }
+    ]
+
+mixin header()
+    +b.HEADER.header(class!=attributes.class)
+        +e.wrp.wrp
+            +e.logo-block
+                +e.A.logo-link(href="/")
+                    +e.IMG.img(src="img/logo-text.png")
+                    +e.IMG.img_no-text(src="img/logo.png")
+            +e.nav-block
+                +b.header-top
+                    +e.NAV.nav
+                        +e.UL.list
+                            +e.LI.item_phone
+                                a(href="tel:84232025009") 8 (423) 202-50-09
+                            each item in headerNavTop
+                                +e.LI.item_link
+                                    a(href=`${item.link}`)= item.text
+                    +e.UL.list
+                        each item in headerSocials
+                            +e.LI.item_social
+                                a(href=`${item.link}`)
+                                    +icon(item.icon)
+                +b.header-bottom
+                    +e.NAV.nav
+                        +e.UL.list
+                            each item in headerNavBottom
+                                +e.LI.item
+                                    a(href=`${item.link}`)= item.text
+            +b.DIV.burger
+                +e.A.btn#burger-btn
+                    +e.DIV.lines-block
+                        +e.SPAN.mid-line
+            +b.DIV.sidebar
+                +e.DIV.cont
+                    +e.UL.list
+                        each item in sidebar
+                            +e.li.item
+                                +e.A.link(href=`${item.link}`)= item.text

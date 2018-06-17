@@ -35,13 +35,29 @@ body
   color: $font-col
   overflow-x: hidden
   //letter-spacing: 2px
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+.main // for IE
+  display: block
+  position: relative
+  flex-grow: 1
+  margin-top: 110px
+  +r(880)
+    margin-top: 55px
+  +rms
+    margin-top: 40px
 
 a
   +tr
   display: inline-block
-  color: $font-col
+  color: $font-blue
   &:hover
     color: $main-col
+  &:active
+    color: $main-col-dark
+    
 
 p
   line-height: 1.33
@@ -59,7 +75,9 @@ input, button
   +main-font
   border: none
   background: transparent
-
+input
+  font-size: 16px
+  color: $font-blue
 button
   cursor: pointer
 
@@ -67,19 +85,15 @@ button
   &::-webkit-input-placeholder  /* WebKit browsers */
       color: $color
       opacity: $opacity
-      text-transform: uppercase
   &:-moz-placeholder  /* Mozilla Firefox 4 to 18 */
       color: $color
       opacity: $opacity
-      text-transform: uppercase
   &::-moz-placeholder  /* Mozilla Firefox 19+ */
       color: $color
       opacity: $opacity
-      text-transform: uppercase
   &:-ms-input-placeholder  /* Internet Explorer 10+ */
       color: $color
       opacity: $opacity
-      text-transform: uppercase
 
 +placeholder-color($font-col, 0.8)
 
@@ -94,13 +108,3 @@ button
     padding: 0 15px
 .wrp
   +wrp
-
-// body-flex (footer to bottom)
-
-.body-flex
-  display: flex
-  flex-direction: column
-  min-height: 100vh
-
-.main-flex
-  flex-grow: 1

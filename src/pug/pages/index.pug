@@ -2,16 +2,15 @@ extends ../template
 
 block variables
     - var title = 'Home page'
-    - var bodyFlex = true
 
 block content
 
-    include ../../components/header/header
+    +header()
 
-    +b.MAIN.main(class=bodyFlex ? 'main-flex' : '')
-        span mains
-        +icon("vk")
-        +icon("insta", "ass")
-        p Lorem ipsum dolor sit amet, consectetur adipisicing elit. A accusamus aut autem blanditiis consequuntur corporis cumque debitis delectus deserunt distinctio dolor doloremque esse expedita, fuga illo in laboriosam magnam maiores maxime modi molestiae mollitia nam necessitatibus nihil officiis perferendis praesentium qui, quia quisquam repudiandae rerum sapiente tenetur vel velit veritatis.
+    +b.MAIN.main.home-page
+        include ../../components/hero/hero
+        include ../../components/info/info
+        include ../../components/about-slider/about-slider
+        include ../../components/excursion/excursion
 
     include ../../components/footer/footer

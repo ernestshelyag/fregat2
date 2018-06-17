@@ -1,2 +1,33 @@
 +b.FOOTER.footer
-    span footer
+    +b.header.in-footer
+        +e.wrp.wrp
+            +e.logo-block
+                +e.A.logo-link(href="/")
+                    +e.IMG.img(src="img/logo-text.png")
+                    +e.IMG.img_no-text(src="img/logo.png")
+            +e.nav-block
+                +b.header-top
+                    +e.NAV.nav
+                        +e.UL.list
+                            +e.LI.item_phone
+                                a(href="tel:84232025009") 8 (423) 202-50-09
+                            each item in headerNavTop
+                                +e.LI.item_link
+                                    a(href=`${item.link}`)= item.text
+                    +e.UL.list
+                        each item in headerSocials
+                            +e.LI.item_social
+                                a(href=`${item.link}`)
+                                    +icon(item.icon)
+                +b.header-bottom
+                    +e.NAV.nav
+                        +e.UL.list
+                            each item in headerNavBottom
+                                +e.LI.item
+                                    a(href=`${item.link}`)= item.text
+    +e.bottom
+        +e.wrp.wrp
+            +e.A.policy(href="privacy-policy.html") Политика конфиденциальности
+            +e.A.markello(href="https://markello.ru/" target="_blank")
+                +e.IMG.img(src="img/markello.png")
+                +e.SPAN.text made this love

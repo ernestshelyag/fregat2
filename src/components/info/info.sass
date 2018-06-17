@@ -1,0 +1,42 @@
+.info
+  padding: 70px 0 50px
+  +rn
+    padding: 35px 0 25px
+  &__list
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+    flex-wrap: wrap
+
+  &__item
+    width: 350px
+    margin-bottom: 30px
+    &:nth-child(2), &:nth-child(5)
+      width: 500px
+    +rn
+      margin-bottom: 15px
+    svg
+      fill: $light-blue
+    .stairs
+      width: 40px
+      height: 35px
+    .swing
+      width: 41px
+      height: 38px
+    .flower
+      width: 44px
+      height: 43px
+    .parking
+      width: 36px
+      height: 36px
+    .sign
+      width: 44px
+      height: 44px
+    .car
+      width: 53px
+      height: 32px
+  &__title
+    margin: 15px 0 8px
+    text-transform: uppercase
+  &__text
+    font-size: 18px
