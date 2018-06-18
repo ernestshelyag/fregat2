@@ -1,0 +1,142 @@
+.pick-flat
+  &__title
+    margin-bottom: 28px
+  &__tab
+    +b
+    height: 63px
+    line-height: 63px
+    color: $font-col-light
+    font-size: 18px
+    font-weight: 600
+    text-transform: uppercase
+    width: 348px
+    border: solid 2px $sky-col
+    border-radius: 5px 5px 0 0
+    margin: 0 -4px
+    &.active
+      background: $sky-col
+      color: $font-blue
+
+
+  &__cont
+    display: none
+    &_param
+      padding: 70px 0
+      background: $sky-col
+    &.active
+      display: block
+
+.pick-param
+  &__slider
+    +b
+  display: flex
+  &__form
+    +bb
+    height: 565px
+    width: 400px
+    margin-right: 30px
+  &__table
+    width: 100%
+    td
+      color: $font-blue
+      border: solid 2px $sky-col-dark
+      text-align: center
+      line-height: 45px
+      &:nth-child(7)
+        border-right: none
+      &:last-child
+        border-left: none
+        position: relative
+        width: 40px
+  &__tr
+    +bb
+    height: 47px
+    &_head
+      background: $sky-col-med
+      td
+        text-transform: uppercase
+        font-size: 12px
+        font-weight: 600
+  &__eye-link
+    width: 33px
+    height: 33px
+    border-radius: 50%
+    background: #fff
+    box-shadow: 0 0 10px 0 rgba(255, 71, 22, 0.22)
+    line-height: 1
+    +psevdo
+    position: absolute
+    +zero
+    left: -20px
+    &:before
+      width: 20px
+      height: 20px
+      background: $main-col
+      top: 0
+      bottom: 0
+      margin: auto
+      left: 6px
+      transform: rotate(45deg)
+      border-radius: 15px 0 15px
+    &:after
+      width: 10px
+      height: 10px
+      border-radius: 50%
+      border: solid 3px #fff
+      top: 0
+      bottom: 0
+      left: 11px
+      margin: auto
+    &:hover
+      background: $main-col
+      &:before
+        background: #fff
+      &:after
+        border: solid 3px $main-col
+    
+
+.ui-slider-handle
+  position: relative
+  top: 0
+  width: 6px
+  height: 40px
+  //position: absolute
+  //outline: none
+  //transform: translate(-50%, 0)
+  +r(680)
+    height: 20px
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    margin: auto
+    width: 450px
+    height: 3px
+    background: $main-col
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    margin: auto
+    width: 100%
+    height: 25px
+    background: $main-col
+    box-shadow: 0 0 10px $main-col
+    +r(680)
+      box-shadow: none
+
+
+
+
+
+
+
+
+
+
+

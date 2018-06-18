@@ -1,0 +1,33 @@
+.info2
+  padding: 80px 0
+  +rn
+    padding: 40px 0
+  &__title
+    max-width: 1030px
+    margin-bottom: 33px
+  &__list
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+    flex-wrap: wrap
+  &__item
+    width: 47%
+    margin-bottom: 50px
+    svg
+      width: 40px
+      height: 40px
+      margin-bottom: 20px
+    li
+      margin: 0 0 12px 15px
+      +psevdo
+      &:before
+        width: 5px
+        height: 5px
+        border-radius: 50%
+        background: $main-col
+        top: 0
+        bottom: 0
+        left: -15px
+        margin: auto
+  &__btn
+    margin: auto

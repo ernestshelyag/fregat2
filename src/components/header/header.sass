@@ -31,6 +31,7 @@
     border-left: solid 1px #eaeaea
   &.active
     background: #fff
+    border-bottom: solid 1px #eaeaea
     .header
       &__img
         display: none
@@ -38,6 +39,7 @@
           display: block
   &.in-footer
     position: relative
+    border-bottom: none
     +r(880)
       display: none
     .header-top
@@ -88,7 +90,7 @@
         display: none
       a
         text-decoration: none
-        color: #a8b3c6
+        color: $font-col-light
         &:hover
           color: $font-blue
         +r(1000)
@@ -201,7 +203,7 @@
   right: 0
   height: 100vh
   width: 0
-  background: rgba($font-blue, 0.3)
+  background: $bg-blue
   overflow: hidden
   +tr
   &.active

@@ -25,6 +25,11 @@ h4
 
 // svg-sprite
 
+.arr-next, .arr-prev
+  fill: $font-blue
+  width: 27px
+  height: 19px
+
 // breadcrumbs
 
 .breadcrumbs
@@ -38,6 +43,11 @@ h4
     padding-left: 5px
 
 // elements
+
+figure
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center center
 
 =shadow
   box-shadow: 0 8px 10px 0 rgba(255, 74, 25, 0.25)
@@ -61,6 +71,18 @@ h4
     color: #fff
   &:active
     background: $main-col-dark
+    +shadow
+  &_white
+    border: solid 2px $main-col
+    background: #fff
+    color: $main-col
+    &:hover
+      box-shadow: none
+      background: $main-col
+      color: #fff
+    &:active
+      background: $main-col-dark
+
 
 // form
 

@@ -1,13 +1,16 @@
 // responsive
 
-//$wide: 1366
-//$note: 1024
-//$tablet: 768
-//$mobile: 568
-//$mobile-s: 413
+$wide: 1366
+$note: 1024
+$tablet: 768
+$mobile: 568
+$mobile-s: 413
 
 =r($width)
   @media only screen and (max-width: $width+ "px")
+    @content
+=rmin($width)
+  @media only screen and (min-width: $width+ "px")
     @content
 =rw
   @media only screen and (max-width: 1366px)

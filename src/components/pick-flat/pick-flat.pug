@@ -1,0 +1,60 @@
+mixin table-item()
+    +e.TR.tr
+        td 10
+        td 291
+        td 25
+        td 25
+        td 4
+        td Есть
+        td 24 456 334
+        td
+            +e.A.eye-link(href="#")
+
++b.SECTION.pick-flat
+    +e.wrp.wrp
+        +e.H2.title Выбор квартиры
+        +e.menu-block
+            +e.BUTTON.tab(type="button" data-tab="1") Графический выбор
+            +e.BUTTON.tab.active(type="button" data-tab="2") Выбор по параметрам
+    +e.cont-block
+        +e.cont(data-content="1")
+            span graf
+        +e.cont_param.active(data-content="2")
+            +b.pick-param.wrp
+                +e.FORM.form
+                    span form
+                    +e.DIV.item
+                        +e.SPAN.text Сумма страхования
+                        +e.DIV.input-block
+                            span (BTC)
+                            +e.INPUT.input.calc-form__input_1st(type='text', name='inp1')
+                        +e.DIV.background-block
+                            +e.SPAN.min-val 0.01
+                            +e.SPAN.max-val 0.1
+                            +e.SPAN.back1
+                            +e.SPAN.back2
+                            +e.DIV.slider#slider1
+
+                +e.TABLE.table
+                    +e.TR.tr_head
+                        td номер дома
+                        td Номер квартиры
+                        td этаж
+                        td площадь (м²)
+                        td комнат
+                        td отделка
+                        td стоимость (руб.)
+                        td
+                    +table-item()
+                    +table-item()
+                    +table-item()
+                    +table-item()
+                    +table-item()
+                    +table-item()
+                    +table-item()
+                    +table-item()
+                    +table-item()
+                    +table-item()
+                    +table-item()
+
+

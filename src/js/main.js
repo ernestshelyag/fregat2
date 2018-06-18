@@ -10,6 +10,12 @@ $(function () {
 
   sendForm();
 
+  modals();
+
+  pickFlat();
+
+  common();
+
   svg4everybody();
 
 });

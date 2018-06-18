@@ -2,6 +2,24 @@ function sendForm() {
 
     let phonePattern = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{3,10}$/;
 
+    function modalSuccess () {
+        $.magnificPopup.open({
+            removalDelay: 300,
+            mainClass: 'my-mfp-animate',
+            items: {
+                src: '#success-popup'
+            }
+        });
+        function fun() {
+            $.magnificPopup.close({
+                items: {
+                    src: '#success-popup'
+                }
+            });
+        }
+        setTimeout(fun, 2000);
+    }
+
     $('.inputmask').inputmask({
         mask: '+7(999)999-99-99',
         showMaskOnHover: false
@@ -27,6 +45,7 @@ function sendForm() {
             errorFlag = false;
         }
         if (!errorFlag) {
+            modalSuccess();
             $.ajax({
                 url: this.dataset.url,
                 type: "post",
