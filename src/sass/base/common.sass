@@ -1,24 +1,24 @@
 // titles
 
-h1, h2, h3, h4
+.h1, .h2, .h3, .h4
   color: $font-blue
   font-weight: bold
   line-height: 1.1
-h1
+.h1
   font-size: 40px
   +rw
     font-size: 30px
   +rm
     font-size: 24px
-h2
+.h2
   font-size: 30px
   +rn
     font-size: 24px
-h3
+.h3
   font-size: 24px
   +rn
     font-size: 18px
-h4
+.h4
   font-size: 18px
   +rn
     font-size: 16px
@@ -94,6 +94,40 @@ figure
   padding: 0 10px 0 30px
   &.form-err
     border: solid 1px $main-col
+
+// ui-sliders
+
+.ui-slider
+  border: none!important
+  background: transparent!important
+  +psevdo
+  &:before
+    +zero
+    left: -30px
+    width: 120%
+    height: 2px
+    background: $sky-col
+
+.ui-slider-range
+  background: $main-col!important
+  height: 3px!important
+  top: 5px!important
+
+.ui-slider-handle
+  border: none!important
+  cursor: ew-resize!important
+  background: transparent!important
+  +psevdo
+  &:before
+    top: 2px
+    left: 0
+    width: 20px
+    height: 20px
+    border: solid 6px $main-col
+    border-radius: 50%
+    background: #fff
+    +shadow
+
 
 
 

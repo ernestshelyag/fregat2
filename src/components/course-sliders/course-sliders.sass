@@ -1,0 +1,66 @@
+.course-sliders
+  padding: 80px 0
+  +rn
+    padding: 40px 0
+  &__title
+    margin-bottom: 28px
+  &__list
+    display: flex
+    justify-content: space-between
+  &__hidden
+    display: none
+  &__item
+    cursor: pointer
+    border: solid 2px $sky-col
+    border-radius: 5px
+    box-shadow: 0 3px 16px 0 rgba(21, 72, 158, 0.09)
+    flex-grow: 1
+    margin-right: 10px
+    font-size: 18px
+    font-weight: 600
+    text-transform: uppercase
+    height: 63px
+    line-height: 63px
+    color: $font-col-light
+    text-align: center
+    &:last-child
+      margin-right: 0
+    &.active
+      color: $font-blue
+    span
+      &:first-child
+        padding-right: 5px
+
+  // sliders
+
+  &__sliders
+    margin: 25px 0 50px
+    +rn
+      margin: 20px 0 30px
+  &__arrs
+    margin-bottom: 20px
+    text-align: right
+
+  &__slider-block
+    //position: absolute
+    //opacity: 0
+    display: none
+    &.active
+      //opacity: 1
+      //position: relative
+      display: block
+
+  &__slide
+    width: 414px
+    height: 300px
+
+  &__btn
+    margin: auto
+
+
+
+
+
+
+
+

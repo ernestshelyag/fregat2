@@ -1,4 +1,5 @@
 .pick-flat
+
   &__title
     margin-bottom: 28px
   &__tab
@@ -16,27 +17,72 @@
     &.active
       background: $sky-col
       color: $font-blue
-
-
   &__cont
+    height: 707px
     display: none
     &_param
-      padding: 70px 0
+      padding-top: 70px
       background: $sky-col
     &.active
       display: block
 
+// param form
+
 .pick-param
-  &__slider
-    +b
   display: flex
   &__form
-    +bb
-    height: 565px
-    width: 400px
+    display: flex
+    flex-direction: column
+    height: 567px
+    min-width: 400px
     margin-right: 30px
+
+  // ui-sliders
+
+  &__slider-block
+    background: #fff
+    border-radius: 5px
+  &__lev
+    padding: 20px 30px 0 30px
+    &:first-child
+      padding: 30px 30px 0 30px
+  &__param-title
+    font-size: 14px
+    text-transform: uppercase
+    font-weight: 600
+  &__value-block
+    margin: 0 0 10px
+    display: flex
+    justify-content: space-between
+    input
+      font-size: 30px
+      &:first-child
+        min-width: 165px
+      &:last-child
+        max-width: 185px
+        text-align: right
+  &__slider_bottom.ui-slider:before
+    background: transparent
+
+  .ui-slider
+    top: 5px!important
+
+  // table
+
+  &__table-block
+    position: relative
+    display: block
+    width: 100%
+
+  &__scroll-content
+    height: 566px
+    overflow: auto
+
   &__table
     width: 100%
+    &_head
+      position: absolute
+      z-index: 100
     td
       color: $font-blue
       border: solid 2px $sky-col-dark
@@ -49,10 +95,12 @@
         position: relative
         width: 40px
   &__tr
-    +bb
     height: 47px
     &_head
       background: $sky-col-med
+      &.hidden
+        visibility: hidden
+
       td
         text-transform: uppercase
         font-size: 12px
@@ -93,42 +141,70 @@
         background: #fff
       &:after
         border: solid 3px $main-col
-    
 
-.ui-slider-handle
-  position: relative
+// custom scrollbar
+
+.my-custom-scrollbar
+  border: solid 2px $sky-col-dark
+  cursor: pointer
+  display: none
+  position: absolute
+
+.my-custom-scrollbar.scroll-scrolly_visible
+  display: block
+  height: 567px
+  right: -20px
   top: 0
-  width: 6px
-  height: 40px
-  //position: absolute
-  //outline: none
-  //transform: translate(-50%, 0)
-  +r(680)
-    height: 20px
-  &:before
-    content: ''
-    position: absolute
-    top: 0
-    bottom: 0
-    right: 0
-    margin: auto
-    width: 450px
-    height: 3px
-    background: $main-col
-  &:after
-    content: ''
-    position: absolute
-    top: 0
-    bottom: 0
-    right: 0
-    left: 0
-    margin: auto
-    width: 100%
-    height: 25px
-    background: $main-col
-    box-shadow: 0 0 10px $main-col
-    +r(680)
-      box-shadow: none
+  width: 10px
+
+.my-custom-scrollbar div
+  height: 100%
+  left: 0
+  top: 0
+  position: absolute
+  width: 100%
+
+.my-custom-scrollbar .scroll-bar
+  background: $sky-col-dark
+  z-index: 12
+
+.my-custom-scrollbar .scroll-bar
+  height: 100px
+
+// form buttons
+
+.custom-btn-param
+  margin-top: 30px
+  flex-grow: 1
+  border: solid 2px $sky-col-dark
+  border-radius: 5px
+  padding: 35px 30px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  &__title
+    font-size: 14px
+    text-transform: uppercase
+    font-weight: 600
+  &__top-block
+    display: flex
+    justify-content: space-between
+
+  &__top-room
+    width: 145px
+  &__top-decor
+    flex-grow: 1
+  &__bottom-box
+    margin-top: 10px
+    display: flex
+    justify-content: space-between
+  &__btn
+    width: 209px
+
+
+
+
+
 
 
 

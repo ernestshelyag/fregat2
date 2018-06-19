@@ -1,0 +1,51 @@
+- var courseTabs = ["2","3","4","5","6","7","8","9","10"]
+
++b.SECTION.course-sliders
+    +e.wrp.wrp
+        +e.title.h2 Ход строительства
+        +e.tabs-block
+            +e.UL.list
+                +e.SPAN.hidden Дом:
+                +e.LI.item.active(data-tab="1")
+                    span Дом
+                    span №1
+                each item in courseTabs
+                    +e.LI.item(data-tab=`${item}`)
+                        span Дом
+                        span= `№${item}`
+    +e.sliders
+        +e.slider-block.active(data-content="1")
+            +e.arrs_1.wrp
+            +e.slider-top_1
+                +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                +e.FIGURE.slide(style="background-image: url(img/hero.jpg);")
+                +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+            +e.slider-bottom_1
+                +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+        each item in courseTabs
+            +e.slider-block(data-content=`${item}`)
+                +e.arrs.wrp(class=`course-sliders__arrs_${item}`)
+                +e.slider-top(class=`course-sliders__slider-top_${item}`)
+                    +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                    +e.FIGURE.slide(style="background-image: url(img/hero.jpg);")
+                    +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                    +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                    +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                    +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                +e.slider-bottom(class=`course-sliders__slider-bottom_${item}`)
+                    +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                    +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                    +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                    +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                    +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+                    +e.FIGURE.slide(style="background-image: url(img/course-slide.jpg);")
+
+    +e.A.btn.btn_white(href="#") Вся история

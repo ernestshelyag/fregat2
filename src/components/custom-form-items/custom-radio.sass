@@ -1,0 +1,37 @@
+.custom-radio
+  font-size: 30px
+  //padding-left: 10px
+
+  &__label
+    min-width: 53px
+    margin-right: 5px
+    display: inline-block
+    position: relative
+    padding-left: 20px
+    cursor: pointer
+    font-size: 18px
+    user-select: none
+    color: $font-blue
+    input:checked ~ .custom-radio__mask:before
+      display: block
+
+  &__input
+    position: absolute
+    cursor: pointer
+    opacity: 0
+  &__mask
+    +psevdo
+    position: absolute
+    top: 0
+    left: 0
+    height: 15px
+    width: 15px
+    border-radius: 50%
+    border: solid 2px $font-blue
+    &:before
+      width: 7px
+      height: 7px
+      border-radius: 50%
+      background: $font-blue
+      +zero
+      display: none

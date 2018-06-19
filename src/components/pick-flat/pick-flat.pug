@@ -12,7 +12,7 @@ mixin table-item()
 
 +b.SECTION.pick-flat
     +e.wrp.wrp
-        +e.H2.title Выбор квартиры
+        +e.title.h2 Выбор квартиры
         +e.menu-block
             +e.BUTTON.tab(type="button" data-tab="1") Графический выбор
             +e.BUTTON.tab.active(type="button" data-tab="2") Выбор по параметрам
@@ -21,40 +21,125 @@ mixin table-item()
             span graf
         +e.cont_param.active(data-content="2")
             +b.pick-param.wrp
+
+                // form
+
                 +e.FORM.form
-                    span form
-                    +e.DIV.item
-                        +e.SPAN.text Сумма страхования
-                        +e.DIV.input-block
-                            span (BTC)
-                            +e.INPUT.input.calc-form__input_1st(type='text', name='inp1')
-                        +e.DIV.background-block
-                            +e.SPAN.min-val 0.01
-                            +e.SPAN.max-val 0.1
-                            +e.SPAN.back1
-                            +e.SPAN.back2
-                            +e.DIV.slider#slider1
+                    +e.slider-block
+                        +e.lev
+                            +e.SPAN.param-title Этаж
+                            +e.value-block
+                                input(type="text" id="min-floor" readonly name="min-floor")
+                                input(type="text" id="max-floor" readonly name="max-floor")
+                            +e.slider#slider-floor
+                        +e.lev
+                            +e.SPAN.param-title Площадь (м²)
+                            +e.value-block
+                                input(type="text" id="min-area" readonly name="min-area")
+                                input(type="text" id="max-area" readonly name="max-area")
+                            +e.slider#slider-area
+                        +e.lev
+                            +e.SPAN.param-title Стоимость (руб)
+                            +e.value-block
+                                input(type="text" id="min-price" readonly name="min-price")
+                                input(type="text" id="max-price" readonly name="max-price")
+                            +e.slider_bottom#slider-price
+                    +b.custom-btn-param
+                        +e.top-block
+                            +e.top-room
+                                +e.SPAN.title Комнат
+                                +b.DIV.custom-checkbox
+                                    +e.LABEL.label 1
+                                        +e.INPUT.input(type="checkbox" name="rooms" value="room-1")
+                                        +e.SPAN.mask
+                                    +e.LABEL.label 2
+                                        +e.INPUT.input(type="checkbox" name="rooms" value="room-2" checked)
+                                        +e.SPAN.mask
+                                    +e.LABEL.label 3
+                                        +e.INPUT.input(type="checkbox" name="rooms" value="room-3" )
+                                        +e.SPAN.mask
+                                    +e.LABEL.label 4
+                                        +e.INPUT.input(type="checkbox" name="rooms" value="room-4")
+                                        +e.SPAN.mask
+                            +e.top-decor
+                                +e.SPAN.title_decor Отделка
+                                +b.DIV.custom-radio
+                                    +e.LABEL.label Все
+                                        +e.INPUT.input(type="radio" name="decor" value="full-decor")
+                                        +e.SPAN.mask
+                                    +e.LABEL.label Есть
+                                        +e.INPUT.input(type="radio" name="decor" value="med-decor")
+                                        +e.SPAN.mask
+                                    +e.LABEL.label Нет
+                                        +e.INPUT.input(type="radio" name="decor" value="no-decor" checked)
+                                        +e.SPAN.mask
 
-                +e.TABLE.table
-                    +e.TR.tr_head
-                        td номер дома
-                        td Номер квартиры
-                        td этаж
-                        td площадь (м²)
-                        td комнат
-                        td отделка
-                        td стоимость (руб.)
-                        td
-                    +table-item()
-                    +table-item()
-                    +table-item()
-                    +table-item()
-                    +table-item()
-                    +table-item()
-                    +table-item()
-                    +table-item()
-                    +table-item()
-                    +table-item()
-                    +table-item()
+                        +e.bottom-block
+                            +e.SPAN.title Номер дома
+                            +e.bottom-box
+                                +b.DIV.custom-select
+                                    +e.SELECT.select(name="house-num")
+                                        option(value="0") Все
+                                        option(value="1") 1
+                                        option(value="2") 2
+                                        option(value="3") 3
+                                        option(value="4") 4
+                                        option(value="5") 5
+                                        option(value="6") 6
+                                        option(value="7") 7
+                                        option(value="8") 8
+                                        option(value="9") 9
+                                        option(value="10") 10
+                                +e.BUTTON.btn.btn(type="submit") Применить
 
+                // table
 
+                +e.table-block
+                    +e.TABLE.table_head
+                        +e.TR.tr_head
+                            td номер дома
+                            td Номер квартиры
+                            td этаж
+                            td площадь (м²)
+                            td комнат
+                            td отделка
+                            td стоимость (руб.)
+                            td
+
+                    +e.scroll-content
+                        +e.TABLE.table
+                            +e.TR.tr_head.hidden
+                                td номер дома
+                                td Номер квартиры
+                                td этаж
+                                td площадь (м²)
+                                td комнат
+                                td отделка
+                                td стоимость (руб.)
+                                td
+                            +table-item()
+                            +table-item()
+                            +table-item()
+                            +table-item()
+                            +table-item()
+                            +table-item()
+                            +table-item()
+                            +table-item()
+                            +table-item()
+                            +table-item()
+                            +table-item()
+                            +table-item()
+                            +table-item()
+                            +table-item()
+                            +table-item()
+                            +table-item()
+                            +table-item()
+                            +table-item()
+                            +table-item()
+                            +table-item()
+
+                    .my-custom-scrollbar
+                        .scroll-element_outer
+                            .scroll-element_size
+                            .scroll-element_track
+                            .scroll-bar

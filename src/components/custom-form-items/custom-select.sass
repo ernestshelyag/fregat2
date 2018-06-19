@@ -1,0 +1,78 @@
+.custom-select
+  position: relative
+  +main-font
+  font-size: 16px
+  &__select
+    display: none
+
+.select-selected
+  background-color: #fff
+  border-radius: 50px
+  opacity: .8
+  +tr
+  line-height: 25px
+  text-align: center
+  +psevdo
+  &:before, &:after
+    width: 9px
+    height: 9px
+    right: 25px
+    top: 0
+    bottom: 5px
+    margin: auto
+    transform: rotate(45deg)
+    transition: right .3s ease
+  &:before
+    border-bottom: solid 2px $font-blue
+  &:after
+    border-right: solid 2px $font-blue
+  &.select-arrow-active
+    border-radius: 35px 35px 0 0
+    &:before
+      right: 20px
+    &:after
+      right: 30px
+  &.col
+    opacity: 1
+
+.select-items
+  border-radius: 0 0 35px 35px
+  border-top: none
+  width: 105px
+  text-align: center
+
+.select-items div, .select-selected
+  color: $font-blue
+  width: 105px
+  height: 25px
+  padding: 10px
+  line-height: 6px
+  border-bottom: solid 1px rgba($font-blue, .1)
+  cursor: pointer
+
+  &:last-child
+    border-radius: 0 0 35px 35px
+    border-bottom: none
+    height: 45px
+
+.select-selected
+  height: 45px
+  line-height: 25px
+  border: solid 2px $sky-col
+  border-bottom: solid 1px rgba($font-blue, .1)
+
+
+.select-items
+  position: absolute
+  background-color: #fff
+  top: 100%
+  left: 0
+  right: 0
+  z-index: 99
+  border: solid 2px $sky-col
+  border-top: none
+
+.select-hide
+  display: none
+.select-items div:hover, .same-as-selected
+  background-color: rgba($font-blue, 0.1)

@@ -5,17 +5,14 @@ $(window).on('load', function () {
 $(function () {
 
   header();
-
   aboutSlider();
-
   sendForm();
-
   modals();
-
   pickFlat();
+  select();
+  courseSliders();
 
   common();
-
   svg4everybody();
 
 });

@@ -1,0 +1,39 @@
+.custom-checkbox
+  font-size: 30px
+  &__label
+    min-width: 39px
+    margin-right: 5px
+    display: inline-block
+    position: relative
+    padding-left: 20px
+    cursor: pointer
+    font-size: 18px
+    user-select: none
+    color: $font-blue
+    input:checked ~ .custom-checkbox__mask
+      background: $font-blue
+      &:before
+        display: block
+  &__input
+    position: absolute
+    cursor: pointer
+    opacity: 0
+  &__mask
+    +psevdo
+    position: absolute
+    top: 0
+    left: 0
+    height: 15px
+    width: 15px
+    border-radius: 5px
+    border: solid 2px $font-blue
+    &:before
+      width: 6px
+      height: 10px
+      transform: rotate(45deg)
+      border-bottom: solid 2px #fff
+      border-right: solid 2px #fff
+      background: $font-blue
+      +zero
+      bottom: 4px
+      display: none
