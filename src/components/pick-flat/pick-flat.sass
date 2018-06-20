@@ -149,27 +149,22 @@
   cursor: pointer
   display: none
   position: absolute
-
-.my-custom-scrollbar.scroll-scrolly_visible
-  display: block
-  height: 567px
-  right: -20px
-  top: 0
-  width: 10px
-
-.my-custom-scrollbar div
-  height: 100%
-  left: 0
-  top: 0
-  position: absolute
-  width: 100%
-
-.my-custom-scrollbar .scroll-bar
-  background: $sky-col-dark
-  z-index: 12
-
-.my-custom-scrollbar .scroll-bar
-  height: 100px
+  &.scroll-scrolly_visible
+    display: block
+    height: 50%
+    right: -20px
+    top: 0
+    width: 10px
+  div
+    height: 100%
+    left: 0
+    top: 0
+    position: absolute
+    width: 100%
+  .scroll-bar
+    background: $sky-col-dark
+    z-index: 12
+    height: 100px
 
 // form buttons
 

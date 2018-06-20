@@ -1,0 +1,137 @@
+.works
+  padding-bottom: 80px
+  +rn
+    padding-bottom: 40px
+  &__title-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 26px
+  &__cont
+    display: flex
+    justify-content: space-between
+  &__img-block
+    height: 427px
+    flex-grow: 1
+    margin-left: 30px
+    border-radius: 5px
+    overflow: hidden
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover // to do
+
+  &__list
+    margin-top: 45px
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+  &__item
+    flex-grow: 1
+    margin-right: 50px
+    &:last-child
+      margin-right: 0
+  &__lil-title
+    margin: 15px 0 8px
+    text-transform: uppercase
+  &__text
+    font-size: 18px
+
+// slide
+
+.works-info-block
+  width: 474px
+  height: 427px
+  border: solid 2px $sky-col
+  border-radius: 5px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  // - - -
+  &__top
+    height: 107px
+    padding: 30px
+    background: $sky-col
+    span
+      font-size: 18px
+      font-weight: bold
+      color: $font-blue
+      text-transform: uppercase
+      display: inline-block
+    p
+      padding-left: 5px
+      display: inline-block
+      font-size: 18px
+  &__title-block
+    margin-bottom: 10px
+    p
+      padding-left: 15px
+  &__num-item
+    display: inline-block
+    margin-right: 20px
+  // - - -
+  &__mid
+    flex-grow: 1
+    padding: 30px
+  &__mid-top
+    display: flex
+    justify-content: space-between
+  &__mid-top-item
+    p
+      font-size: 18px
+      color: $font-blue
+      display: inline-block
+      margin-bottom: 7px
+    span
+      font-size: 12px
+      display: block
+      text-transform: uppercase
+      margin-bottom: 3px
+    &_right
+      span
+        font-size: 18px
+        color: $font-blue
+        display: inline-block
+        margin-bottom: 10px
+        text-transform: none
+      li
+        margin: 0 0 7px 15px
+        +psevdo
+        &:before
+          width: 5px
+          height: 5px
+          border-radius: 50%
+          background: $main-col
+          top: 0
+          bottom: 0
+          left: -15px
+          margin: auto
+  &__mid-bottom
+    margin-top: 20px
+    p
+      line-height: 1.6
+  // - - -
+  &__bottom
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 100px
+    margin: 0 30px
+    border-top: solid 2px $sky-col
+  &__bottom-item
+    width: 50%
+    height: 100%
+    padding-top: 30px
+    &:last-child
+      border-left: solid 2px $sky-col
+      padding-left: 25px
+    span
+      text-transform: uppercase
+      font-size: 12px
+      font-weight: 600
+      margin-bottom: 3px
+      display: block
+    p
+      font-size: 18px
+      color: $font-blue
+      line-height: 1

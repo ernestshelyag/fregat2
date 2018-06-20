@@ -1,0 +1,110 @@
+.about-block
+  padding: 80px 0
+  +rn
+    padding: 40px 0
+  &__wrp
+    display: flex
+    justify-content: space-between
+  &__info-block
+    width: 43%
+    flex-grow: 1
+  &__title
+    margin-bottom: 24px
+  &__item
+    margin-bottom: 24px
+    &:last-child
+      margin-bottom: 0
+
+.about-img-block
+  width: 600px
+  margin-left: 50px
+  position: relative
+  &__circle-block
+    +b
+    width: 270px
+    height: 270px
+    border-radius: 50%
+    border: solid 2px $main-col
+    +vcenter
+  &__decor
+    +psevdo
+    display: block
+    width: 10px
+    height: 10px
+    background: $main-col
+    border-radius: 50%
+    position: absolute
+    &:before
+      +tr
+      +zero
+      left: -4px
+      width: 20px
+      height: 20px
+      border: solid 6px $main-col
+      border-radius: 50%
+      background: #fff
+      +shadow
+      opacity: 0
+    &_1
+      top: -6px
+    &_1, &_6
+      left: 0
+      right: 0
+      margin: auto
+    &_2, &_3
+      top: 23%
+    &_2, &_4
+      left: 5%
+    &_3, &_5
+      right: 5%
+    &_4, &_5
+      bottom: 23%
+    &_6
+      bottom: -6px
+
+    &.active:before
+      opacity: 1
+
+  &__img
+    +vcenter
+    top: 52%
+    width: 115px
+    height: auto
+
+  &__text-block
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 100%
+  &__text
+    margin-top: 10px
+    font-size: 18px
+  &__lev
+    display: flex
+    justify-content: space-between
+    &:first-child, &:last-child
+      justify-content: center
+      text-align: center
+  &__item
+    &_2
+      margin-left: 15px
+    &_3
+      margin-right: 75px
+    &_4
+      margin-left: 30px
+    &_5
+      margin-right: 60px
+
+
+
+
+
+
+
+
+
+
+
+
+
+

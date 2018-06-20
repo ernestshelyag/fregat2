@@ -1,0 +1,66 @@
+.news
+  padding-bottom: 80px
+  +rn
+    padding-bottom: 40px
+  &__title-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 30px
+  &__link-all
+    text-transform: uppercase
+    color: $main-col
+    padding-right: 15px
+    text-decoration: none
+    font-weight: bold
+    +psevdo
+    &:before
+      width: 7px
+      height: 7px
+      border-top: solid 2px $main-col
+      border-right: solid 2px $main-col
+      +zero
+      left: auto
+      transform: rotate(45deg)
+
+  &__lev
+    display: flex
+    justify-content: space-between
+    &_top
+      margin-bottom: 30px
+  &__link
+    text-decoration: none
+    height: 283px
+    min-width: 443px
+    margin: 0 15px
+    padding: 0 42px 37px
+    display: flex
+    align-items: flex-end
+    position: relative
+    &_long
+      flex-grow: 1
+
+    div
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      background-position: center center
+      background-size: cover
+      z-index: -1
+      border-radius: 5px
+      overflow: hidden
+    p
+      color: #fff
+      z-index: 10
+      font-size: 24px
+      font-weight: 600
+      
+  &__mask
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-image: linear-gradient(to top, rgba(52, 46, 63, 0.79) 21%, transparent)

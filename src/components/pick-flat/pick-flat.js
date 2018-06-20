@@ -33,11 +33,7 @@ function pickFlat() {
     $('#slider-area').draggable();
 
     // price
-    function num(n) {
-        n += "";
-        n = new Array(4 - n.length % 3).join("U") + n;
-        return n.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
-    }
+
     $('#slider-price').slider({
         range: true,
         min: 2000000,
@@ -45,12 +41,12 @@ function pickFlat() {
         step: 1000000,
         values: [ 3000000, 90000000 ],
         slide: function( event, ui ) {
-            $( '#min-price' ).val(num(ui.values[0]));
-            $( '#max-price' ).val(num(ui.values[1]));
+            $( '#min-price' ).val(numSpaces(ui.values[0]));
+            $( '#max-price' ).val(numSpaces(ui.values[1]));
         }
     });
-    $('#min-price').val(num($('#slider-price').slider('values', 0)));
-    $('#max-price').val(num($('#slider-price').slider('values', 1)));
+    $('#min-price').val(numSpaces($('#slider-price').slider('values', 0)));
+    $('#max-price').val(numSpaces($('#slider-price').slider('values', 1)));
     $('#slider-price').draggable();
 
     // ### others ###

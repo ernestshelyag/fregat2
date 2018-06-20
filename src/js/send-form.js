@@ -45,7 +45,6 @@ function sendForm() {
             errorFlag = false;
         }
         if (!errorFlag) {
-            modalSuccess();
             $.ajax({
                 url: this.dataset.url,
                 type: "post",

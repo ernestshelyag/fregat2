@@ -9,20 +9,12 @@ function courseSliders() {
             slidesToShow: 3,
             slidesToScroll: 3,
             dots: false,
-            // autoplay: true,
-            // autoplaySpeed: 3000,
+            autoplay: true,
+            autoplaySpeed: 3000,
             asNavFor: '.course-sliders__slider-bottom_' + i,
             appendArrows: '.course-sliders__arrs_' + i,
-            prevArrow: '<button type="button" class="slick-prev">' +
-            '             <svg class="arr-prev">\n' +
-            '               <use xlink:href="img/sprite.svg#arr-prev"></use>\n' +
-            '             </svg>' +
-            '           </button>',
-            nextArrow: '<button type="button" class="slick-prev">' +
-            '             <svg class="arr-next">\n' +
-            '               <use xlink:href="img/sprite.svg#arr-next"></use>\n' +
-            '             </svg>' +
-            '           </button>',
+            prevArrow: '<button type="button" class="slick-prev"><img src="img/arr-prev.svg"></button>',
+            nextArrow: '<button type="button" class="slick-prev"><img src="img/arr-next.svg"></button>',
             responsive: [
                 {
                     breakpoint: 1200,
@@ -48,4 +40,5 @@ function courseSliders() {
             ]
         });
     }
+
 }

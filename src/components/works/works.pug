@@ -1,0 +1,69 @@
+mixin works-slide()
+    +e.slide
+        +e.cont
+            +b.works-info-block
+                +e.top
+                    +e.title-block
+                        span ЖК Фрегат
+                        p К.1, ул.Нейбута, 17
+                    +e.num-block
+                        +e.num-item
+                            span 25
+                            p этажей
+                        +e.num-item
+                            span 349
+                            p квартир
+                +e.mid
+                    +e.mid-top
+                        +e.mid-top-item
+                            span Старт строительства:
+                            p Май 2016 года
+                            span Окончание строительства:
+                            p Июнь 2019 года
+                        +e.mid-top-item_right
+                            span 4 лифта фирмы Otis:
+                            ul
+                               li 2 пассажирских
+                               li 2 грузовых
+                    +e.mid-bottom
+                        p Студии (26,4 м2 - 29,1 м2)
+                        p 1-е квартиры (34,9 м2 - 43,2 м2)
+                +e.bottom
+                    +e.bottom-item
+                        span Награда
+                        p Green Zoom
+                    +e.bottom-item
+                        span Награда
+                        p Торговая марка года
+
+            +e.img-block
+                img(src="img/works-big.jpg")
+
++b.SECTION.works
+    +e.wrp.wrp
+        +e.title-block
+            +e.title.h2 Наши работы
+            +e.arrs
+        +e.slider-block
+            +works-slide()
+            +works-slide()
+            +works-slide()
+            +works-slide()
+
+        +e.UL.list
+            +e.LI.item
+                +icon("check")
+                +e.lil-title.h4 УФ-стеклопакеты
+                +e.text Сохранение тепла внутри помещения, защита от прямых солнечных лучей
+            +e.LI.item
+                +icon("check")
+                +e.lil-title.h4 Централизованная
+                +e.text автоматизированная система контроля и учета энергии
+            +e.LI.item
+                +icon("check")
+                +e.lil-title.h4 Светодиодное
+                +e.text освещение
+            +e.LI.item
+                +icon("check")
+                +e.lil-title.h4 Лифты с рекуперацией
+                +e.text электроэнергии (накопление и повторное использование)

@@ -1,0 +1,16 @@
++b.SECTION.callback(style="background-image: url(img/worker2.jpg);")
+    +e.wrp.wrp
+        +e.box
+            +e.title.h2
+                | Остались вопросы?
+                br
+                | Закажите
+                span бесплатную
+                | консультацию
+            +e.FORM.form.form-callback(data-url="")
+                input(type="hidden" value="Консультация")
+                +e.INPUT.inp.inp.inputmask(type="text" name="Телефон:" placeholder="Телефон" autocomplete="off")
+                +e.BUTTON.btn.btn(type="submit") Отправить
+            +e.P.callback-text
+                span *
+                |Наш менеджер перезвонит вам в течение 2 минут и ответит на все вопросы

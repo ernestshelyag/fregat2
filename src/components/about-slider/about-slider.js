@@ -4,16 +4,8 @@ function aboutSlider() {
         slidesToScroll: 1,
         dots: false,
         appendArrows: '.about-slider__arrs',
-        prevArrow: '<button type="button" class="slick-prev">' +
-        '             <svg class="arr-prev">\n' +
-        '               <use xlink:href="img/sprite.svg#arr-prev"></use>\n' +
-        '             </svg>' +
-        '           </button>',
-        nextArrow: '<button type="button" class="slick-prev">' +
-        '             <svg class="arr-next">\n' +
-        '               <use xlink:href="img/sprite.svg#arr-next"></use>\n' +
-        '             </svg>' +
-        '           </button>',
+        prevArrow: '<button type="button" class="slick-prev"><img src="img/arr-prev.svg"></button>',
+        nextArrow: '<button type="button" class="slick-prev"><img src="img/arr-next.svg"></button>',
         responsive: [
             {
                 breakpoint: 1200,

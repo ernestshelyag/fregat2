@@ -1,0 +1,87 @@
+.calc
+  background: $sky-col
+  padding: 90px 0 80px
+  +rn
+    padding: 45px 0 40px
+  &__title
+    margin-bottom: 24px
+  &__cont
+    display: flex
+    justify-content: space-between
+
+// controllers
+  
+.calc-block
+  background: #fff
+  border-radius: 5px
+  height: 409px
+  &__lev
+    padding: 20px 30px 0 30px
+    &:first-child
+      padding: 30px 30px 0 30px
+    &_bottom .ui-slider:before
+      background: transparent
+  &__title
+    font-size: 14px
+    text-transform: uppercase
+    font-weight: 600
+  &__value-block
+    margin: 9px 0 5px
+    display: flex
+    justify-content: flex-end
+    input
+      font-size: 30px
+      text-align: right
+    &_cont input:last-child
+        max-width: 50px
+        +bb
+
+  .ui-slider:after
+    width: 30px
+    height: 3px
+    background: $main-col
+    position: absolute
+    left: -30px
+    top: 5px
+
+// values
+
+.calc-info
+  flex-grow: 1
+  margin-left: 30px
+  border: solid 2px #fff
+  border-radius: 5px
+  &__top
+    background: #fff
+    height: 128px
+    display: flex
+    align-items: center
+    padding: 40px 30px
+  &__item
+    width: 250px
+    margin-left: 10px
+  &__val-title
+    font-size: 14px
+    text-transform: uppercase
+    font-weight: bold
+  &__value-block
+    margin-top: 6px
+    font-size: 30px
+    color: $font-blue
+    span:last-child
+        padding-left: 10px
+  &__bottom
+    margin-top: 62px
+    display: flex
+    justify-content: center
+  &__box
+    text-align: center
+    max-width: 635px
+  &__title
+    margin-bottom: 13px
+  &__form
+    margin-top: 30px
+    display: flex
+    justify-content: center
+  &__inp
+    margin-right: 15px
