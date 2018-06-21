@@ -1,7 +1,7 @@
 -
     var headerNavTop = [
-        { "text": "О нас", "link": "#" },
-        { "text": "Ипотека", "link": "#" },
+        { "text": "О нас", "link": "about.html" },
+        { "text": "Ипотека", "link": "ipoteka.html" },
         { "text": "Акции", "link": "#" },
         { "text": "Партнёры", "link": "#" },
         { "text": "Вопрос-ответ", "link": "#" },
@@ -20,13 +20,12 @@
         { "text": "О ЖК Фрегат", "link": "#" },
         { "text": "Посмотреть квартиры", "link": "#" },
         { "text": "Ход строительства", "link": "#" },
-        { "text": "Как купить", "link": "#" },
-        { "text": "8 (423) 202-50-09", "link": "tel:84232025009" }
+        { "text": "Как купить", "link": "#" }
     ]
     var sidebar = [
         { "text": "Главная", "link": "/" },
-        { "text": "О нас", "link": "#" },
-        { "text": "Ипотека", "link": "#" },
+        { "text": "О нас", "link": "about.html" },
+        { "text": "Ипотека", "link": "ipoteka.html" },
         { "text": "Акции", "link": "#" },
         { "text": "Партнёры", "link": "#" },
         { "text": "Вопрос-ответ", "link": "#" },
@@ -67,6 +66,8 @@ mixin header()
                             each item in headerNavBottom
                                 +e.LI.item
                                     a(href=`${item.link}`)= item.text
+                            +e.LI.item_phone
+                                a(href="tel:84232025009") 8 (423) 202-50-09
             +b.DIV.burger
                 +e.A.btn#burger-btn
                     +e.DIV.lines-block

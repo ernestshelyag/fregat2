@@ -1,0 +1,30 @@
+mixin usefull-info-slide()
+    +e.slide
+        +e.item_top
+            div Новый корпус в ЖК "Фрегат 2"!
+            p Задача организации, в особенности же начало повседневной работы... Задача организации, в особенности же начало повседневной работы...
+            span 15 августа 2018
+        +e.item
+            div Новый корпус в ЖК "Фрегат 2"!
+            p Задача организации, в особенности же начало повседневной работы...
+            span 15 августа 2018
+
+
++b.SECTION.usefull-info
+    +e.title-block.wrp
+        +e.title.h2 Полезная информация
+        +e.arrs
+    +e.slider.slider-wrp
+        +usefull-info-slide()
+        +e.slide
+            +e.item_top
+                div Новый корпус в ЖК "Фрегат 2"!
+                p мало текста
+                span 15 августа 2018
+            +e.item
+                div Новый корпус в ЖК "Фрегат 2"!
+                p мало текста
+                span 15 августа 2018
+        +usefull-info-slide()
+        +usefull-info-slide()
+        +usefull-info-slide()

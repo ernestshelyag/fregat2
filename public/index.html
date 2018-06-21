@@ -40,9 +40,9 @@
               <ul class="header-top__list">
                 <li class="header-top__item header-top__item_phone"><a href="tel:84232025009">8 (423) 202-50-09</a>
                 </li>
-                <li class="header-top__item header-top__item_link"><a href="#">О нас</a>
+                <li class="header-top__item header-top__item_link"><a href="about.html">О нас</a>
                 </li>
-                <li class="header-top__item header-top__item_link"><a href="#">Ипотека</a>
+                <li class="header-top__item header-top__item_link"><a href="ipoteka.html">Ипотека</a>
                 </li>
                 <li class="header-top__item header-top__item_link"><a href="#">Акции</a>
                 </li>
@@ -94,7 +94,7 @@
                 </li>
                 <li class="header-bottom__item"><a href="#">Как купить</a>
                 </li>
-                <li class="header-bottom__item"><a href="tel:84232025009">8 (423) 202-50-09</a>
+                <li class="header-bottom__item header-bottom__item_phone"><a href="tel:84232025009">8 (423) 202-50-09</a>
                 </li>
               </ul>
             </nav>
@@ -109,9 +109,9 @@
             <ul class="sidebar__list">
               <li class="sidebar__li item"><a class="sidebar__link" href="/">Главная</a>
               </li>
-              <li class="sidebar__li item"><a class="sidebar__link" href="#">О нас</a>
+              <li class="sidebar__li item"><a class="sidebar__link" href="about.html">О нас</a>
               </li>
-              <li class="sidebar__li item"><a class="sidebar__link" href="#">Ипотека</a>
+              <li class="sidebar__li item"><a class="sidebar__link" href="ipoteka.html">Ипотека</a>
               </li>
               <li class="sidebar__li item"><a class="sidebar__link" href="#">Акции</a>
               </li>
@@ -140,7 +140,7 @@
         </div>
       </div>
     </header>
-    <main class="main home-page" role="main">
+    <main class="home-page main" role="main">
       <section class="hero" style="background-image: url(img/hero.jpg);">
         <div class="hero__info-block">
           <div class="hero__title h1">Территория для лучшей жизни
@@ -1684,20 +1684,53 @@
         </div>
       </section>
       <section class="contacts-block">
-        <div class="contacts-block__map" id="map" data-zoom="10" data-lat="59.931632" data-lon="30.336528" data-latmark="59.931551" data-lonmark="30.336528" data-balloon="здесь адрес">
+        <div class="contacts-block__map" id="map" data-zoom="10" data-lat="59.931632" data-lon="30.336528" data-latmark="59.931551" data-lonmark="30.336528" data-balloon="ул.Ватутина, 4В, секция 5, офис 9">
         </div>
         <div class="contacts-block__card-block wrp">
           <div class="contacts-block__card">
-            <div class="contacts-block__info-block"><span>card...</span>
+            <div class="contacts-block__info-block">
+              <div class="contacts-block__title h2">Контакты
+              </div>
+              <div class="contacts-block__item">
+                <svg class="mark">
+                  <use xlink:href="img/sprite.svg#mark"></use>
+                </svg>
+                <div class="contacts-block__text-block"><span class="contacts-block__lil-title">Адрес объекта:</span>
+                  <p>ул.Ватутина, 4В, секция 5, офис 9</p>
+                </div>
+              </div>
+              <div class="contacts-block__item">
+                <svg class="clock">
+                  <use xlink:href="img/sprite.svg#clock"></use>
+                </svg>
+                <div class="contacts-block__text-block"><span class="contacts-block__lil-title">Bремя:</span>
+                  <p>Пн-Чт: 09:00 - 20:00</p>
+                  <p>Пт: 09:00 - 19:30</p>
+                </div>
+              </div>
+              <div class="contacts-block__item">
+                <svg class="phone">
+                  <use xlink:href="img/sprite.svg#phone"></use>
+                </svg>
+                <div class="contacts-block__text-block"><span class="contacts-block__lil-title">Телефон:</span><a href="tel:84232025009">8(423) 202-50-09</a>
+                </div>
+              </div>
+              <div class="contacts-block__item">
+                <svg class="mail">
+                  <use xlink:href="img/sprite.svg#mail"></use>
+                </svg>
+                <div class="contacts-block__text-block"><span class="contacts-block__lil-title">Почта:</span><a href="mailto:info@fregat2.ru">info@fregat2.ru</a>
+                </div>
+              </div>
             </div>
-            <div class="contacts-block__bottom">
+            <div class="contacts-block__bottom"><a class="contacts-block__link" href="#">Запишитесь на просмотр квартир</a>
             </div>
           </div>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="header in-footer">
+      <div class="header in-footer col-white">
         <div class="header__wrp wrp">
           <div class="header__logo-block"><a class="header__logo-link" href="/"><img class="header__img" src="img/logo-text.png" alt="" role="presentation"/><img class="header__img header__img_no-text" src="img/logo.png" alt="" role="presentation"/></a>
           </div>
@@ -1707,9 +1740,9 @@
                 <ul class="header-top__list">
                   <li class="header-top__item header-top__item_phone"><a href="tel:84232025009">8 (423) 202-50-09</a>
                   </li>
-                  <li class="header-top__item header-top__item_link"><a href="#">О нас</a>
+                  <li class="header-top__item header-top__item_link"><a href="about.html">О нас</a>
                   </li>
-                  <li class="header-top__item header-top__item_link"><a href="#">Ипотека</a>
+                  <li class="header-top__item header-top__item_link"><a href="ipoteka.html">Ипотека</a>
                   </li>
                   <li class="header-top__item header-top__item_link"><a href="#">Акции</a>
                   </li>
@@ -1761,15 +1794,13 @@
                   </li>
                   <li class="header-bottom__item"><a href="#">Как купить</a>
                   </li>
-                  <li class="header-bottom__item"><a href="tel:84232025009">8 (423) 202-50-09</a>
-                  </li>
                 </ul>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      <div class="footer__bottom">
+      <div class="footer__bottom col-gray">
         <div class="footer__wrp wrp"><a class="footer__policy" href="privacy-policy.html">Политика конфиденциальности</a><a class="footer__markello" href="https://markello.ru/" target="_blank"><img class="footer__img" src="img/markello.png" alt="" role="presentation"/><span class="footer__text">made this love</span></a>
         </div>
       </div>
@@ -1781,7 +1812,6 @@
         </div><span class="success__text">Наш менеджер свяжется с вами<br>в ближайшее время</span>
       </div>
     </div>
-    <!-- to do-->
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script src="js/vendors.min.js"></script>
     <script src="js/main.min.js"></script>

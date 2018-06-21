@@ -7,7 +7,7 @@ block content
 
     +header()
 
-    +b.MAIN.main.home-page
+    +b.MAIN.home-page.main
         include ../../components/hero/hero
         include ../../components/info/info
         include ../../components/about-slider/about-slider
@@ -26,4 +26,43 @@ block content
         include ../../components/news/news
         include ../../components/contacts-block/contacts-block
 
-    include ../../components/footer/footer
+    +b.FOOTER.footer
+        +b.header.in-footer.col-white
+            +e.wrp.wrp
+                +e.logo-block
+                    +e.A.logo-link(href="/")
+                        +e.IMG.img(src="img/logo-text.png")
+                        +e.IMG.img_no-text(src="img/logo.png")
+                +e.nav-block
+                    +b.header-top
+                        +e.NAV.nav
+                            +e.UL.list
+                                +e.LI.item_phone
+                                    a(href="tel:84232025009") 8 (423) 202-50-09
+                                each item in headerNavTop
+                                    +e.LI.item_link
+                                        a(href=`${item.link}`)= item.text
+                        +e.UL.list
+                            each item in headerSocials
+                                +e.LI.item_social
+                                    a(href=`${item.link}`)
+                                        +icon(item.icon)
+                    +b.header-bottom
+                        +e.NAV.nav
+                            +e.UL.list
+                                each item in headerNavBottom
+                                    +e.LI.item
+                                        a(href=`${item.link}`)= item.text
+        +e.bottom.col-gray
+            +e.wrp.wrp
+                +e.A.policy(href="privacy-policy.html") Политика конфиденциальности
+                +e.A.markello(href="https://markello.ru/" target="_blank")
+                    +e.IMG.img(src="img/markello.png")
+                    +e.SPAN.text made this love
+
+block scripts
+
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+
+    script(src='js/vendors.min.js')
+    script(src='js/main.min.js')

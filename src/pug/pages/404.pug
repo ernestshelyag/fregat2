@@ -1,0 +1,23 @@
+extends ../template
+
+block variables
+    - var title = '404'
+
+block content
+
+    +header()(class='col-sky')
+
+    +b.MAIN.err-404.main
+        +e.cont
+            +e.num-block
+                span 4
+                img(src="img/logo.png")
+                span 4
+            +e.title.h3 Адрес страницы введен неверно
+            +e.P.text
+                | Такой страницы не существует или неверно введен адрес, пожалуйста
+                br
+                | попробуйте еще раз
+            +e.A.link.btn(href="/") На главную
+
+    include ../../components/footer/footer

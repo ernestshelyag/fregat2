@@ -1,7 +1,29 @@
 +b.SECTION.contacts-block
-    +e.map#map(data-zoom="10" data-lat="59.931632" data-lon="30.336528" data-latmark="59.931551" data-lonmark="30.336528" data-balloon="здесь адрес")
+    +e.map#map(data-zoom="10" data-lat="59.931632" data-lon="30.336528" data-latmark="59.931551" data-lonmark="30.336528" data-balloon="ул.Ватутина, 4В, секция 5, офис 9")
     +e.card-block.wrp
         +e.card
             +e.info-block
-                span card...
+                +e.title.h2 Контакты
+                +e.item
+                    +icon("mark")
+                    +e.text-block
+                        +e.SPAN.lil-title Адрес объекта:
+                        p ул.Ватутина, 4В, секция 5, офис 9
+                +e.item
+                    +icon("clock")
+                    +e.text-block
+                        +e.SPAN.lil-title Bремя:
+                        p Пн-Чт: 09:00 - 20:00
+                        p Пт: 09:00 - 19:30
+                +e.item
+                    +icon("phone")
+                    +e.text-block
+                        +e.SPAN.lil-title Телефон:
+                        a(href="tel:84232025009") 8(423) 202-50-09
+                +e.item
+                    +icon("mail")
+                    +e.text-block
+                        +e.SPAN.lil-title Почта:
+                        a(href="mailto:info@fregat2.ru") info@fregat2.ru
             +e.bottom
+                +e.A.link(href="#") Запишитесь на просмотр квартир

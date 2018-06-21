@@ -33,7 +33,8 @@ $(function () {
   aboutBlock();
   works();
   review();
-  contactsBlock();
+  // contactsBlock();
+  usefullinfo();
 
   svg4everybody();
 

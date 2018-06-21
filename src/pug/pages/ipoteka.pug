@@ -1,0 +1,91 @@
+extends ../template
+
+block variables
+    - var title = 'Mortgage'
+
+block content
+
+    -
+        var ipotekaInfo = [
+        {"num": "1", "text": "Клиент обращзается к сотруднику банка в офисе застройщика"},
+        {"num": "2", "text": "Клиент"},
+        {"num": "3", "text": "Клиент обращзается к сотруднику банка в офисе застройщика Клиент обращзается к сотруднику банка в офисе застройщика Клиент обращзается к сотруднику банка в офисе застройщика"},
+        {"num": "4", "text": "Клиент обращзается к сотруднику банка в офисе застройщика"},
+        {"num": "5", "text": "Клиент обращзается к сотруднику банка в офисе застройщика"},
+        {"num": "6", "text": "Клиент обращзается к сотруднику банка в офисе застройщика"},
+        {"num": "7", "text": "Клиент обращзается к сотруднику банка в офисе застройщика"}
+        ]
+
+    +header()(class='col-sky')
+
+    +b.MAIN.ipoteka.main
+        +e.wrp.wrp
+            +b.DIV.breadcrumbs
+                a(href="/") Главная
+                i /
+                a Ипотека
+            +e.title.h1 Ипотека
+            +e.title_sm.h2 7 простых и быстрых шагов приобрести квартиру
+            +e.info-block
+                +e.UL.list
+                    each item in ipotekaInfo
+                        +e.LI.item
+                            span= item.num
+                            p= item.text
+
+        // calc-block
+
+        +b.SECTION.calc
+            +e.wrp.wrp
+                +e.title.h2 Калькулятор ипотеки
+                +e.P.text Мы поможем вам разобраться в разнообразии предложений раздичных банков и подобрать оптимальный вариант. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа дальнейших направлений развития. С другой стороны сложившаяся структура организации требуют определения и уточнения новых предложений.
+                +e.cont
+                    +b.calc-block
+                        +e.lev
+                            +e.SPAN.title Стоимость объекта недвижимости
+                            +e.value-block
+                                input(type="text" id="calc-price" readonly name="calc-price")
+                            +e.slider#slider-calc-price
+                        +e.lev
+                            +e.SPAN.title Процентная ставка в год
+                            +e.value-block
+                                input(type="text" id="calc-percent" readonly name="calc-percent")
+                            +e.slider#slider-calc-percent
+                        +e.lev
+                            +e.SPAN.title Первоначальный взнос
+                            +e.value-block_cont
+                                input(type="text" id="calc-cont" readonly name="calc-cont")
+                                input(type="text" id="calc-cont-per" readonly name="calc-cont-per")
+                            +e.slider#slider-calc-cont
+                        +e.lev_bottom
+                            +e.SPAN.title Срок кредита
+                            +e.value-block
+                                input(type="text" id="calc-time" readonly name="calc-time")
+                            +e.slider#slider-calc-time
+
+
+                    +b.calc-info
+                        +e.top
+                            +e.item
+                                +e.SPAN.val-title Ежемесячный платёж
+                                +e.value-block
+                                    +e.SPAN.value 1000000
+                                    span руб.
+                            +e.item
+                                +e.SPAN.val-title Сумма кредита
+                                +e.value-block
+                                    +e.SPAN.value 100000000
+                                    span руб.
+                        +e.bottom
+                            +e.box
+                                +e.title.h3 Мы поможем выбрать банк
+                                +e.P.text Оставьте ваш номер и наш менеджер перезвонит вам в течение двух минут и поможет выбрать банк с оптимальными условиями
+                                +e.FORM.form.form-callback(data-url="")
+                                    input(type="hidden" value="Выбрать банк")
+                                    +e.INPUT.inp.inp.inputmask(type="text" name="Телефон:" placeholder="Телефон" autocomplete="off")
+                                    +e.BUTTON.btn.btn(type="submit") Отправить
+        // calc end
+
+        include ../../components/usefull-info/usefull-info
+
+    include ../../components/footer/footer

@@ -8,6 +8,20 @@
   z-index: 1000
   background: #fff
   +tr
+
+  &.col-sky
+    background: $sky-col!important
+  &.col-white
+    background: #fff!important
+  &.transp
+    background: transparent
+    .header-bottom__item a
+      color: #fff
+      &:hover
+        color: $main-col
+    .header-bottom__item_phone a
+      color: $font-blue
+
   &__wrp
     display: flex
     align-items: center
@@ -28,18 +42,22 @@
         display: block!important
   &__nav-block
     flex-grow: 1
-    border-left: solid 1px #eaeaea
+    border-left: solid 1px rgba($font-col, .3)
   &.active
     background: #fff
-    border-bottom: solid 1px #eaeaea
+    border-bottom: solid 1px rgba($font-col, .3)
+    .header-bottom__item a
+      color: $font-blue
     .header
       &__img
         display: none
         &_no-text
           display: block
   &.in-footer
+    background: $sky-col
     position: relative
     border-bottom: none
+    padding-bottom: 8px
     +r(880)
       display: none
     .header-top
@@ -52,7 +70,7 @@
 
 .header-top
   height: 55px
-  border-bottom: solid 1px #eaeaea
+  border-bottom: solid 1px rgba($font-col, .3)
   padding-left: 40px
   display: flex
   justify-content: space-between
