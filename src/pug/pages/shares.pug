@@ -1,0 +1,53 @@
+extends ../template
+
+block variables
+    - var title = 'Shares'
+
+block content
+
+    mixin sharesItem()
+        +e.LI.item
+            +e.FIGURE.img-block
+                img(src="img/works-big.jpg")
+            +e.text-block
+                div Задача организации, начало повседневной работы
+                p Задача организации, в особенности начало повседневной работы начало по формированию позиции...
+
+    +header()(class='col-sky')
+
+    +b.MAIN.shares.main
+        +e.wrp.wrp
+            +b.DIV.breadcrumbs
+                a(href="/") Главная
+                i /
+                a Акции
+            +e.title.h1 Акции
+            +e.top-text-block
+                p Мы хотим, чтобы каждый жил в современной, комфортной, а главное доступной квартире. Каждый день мы решаем жилищные вопросы наших покупателей. И мы готовы идти еще дальше в этом деле!
+            +e.cont
+                +e.items-block
+                    +e.UL.list
+                        +e.LI.item
+                            +e.FIGURE.img-block
+                                img(src="img/tv.jpg")
+                            +e.text-block
+                                div Задача организации, начало повседневной работы
+                                p Задача организации, в особенности начало повседневной работы начало по формированию позиции... Задача организации, в особенности начало повседневной работы начало по формированию позиции...
+                        +e.LI.item
+                            +e.FIGURE.img-block
+                                img(src="img/tv.jpg")
+                            +e.text-block
+                                div Задача организации, начало повседневной работы
+                                p Задача
+                        +sharesItem()
+                        +sharesItem()
+                        +sharesItem()
+                        +sharesItem()
+                +e.sale-block
+                    figure(style="background-image: url(img/shares-family.jpg);)")
+                    +e.sale-text-block
+                        div Мы молодая семья!
+                        p Решили приобрести квартиру в ипотеку? Тогда получите скидку на квартиру - 3%
+                        +e.A.link.btn(href="#") Подробнее
+
+    include ../../components/footer/footer

@@ -1,40 +1,22 @@
 function aboutSlider() {
-    $('.about-slider__slider').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        dots: false,
-        appendArrows: '.about-slider__arrs',
-        prevArrow: '<button type="button" class="slick-prev"><img src="img/arr-prev.svg"></button>',
-        nextArrow: '<button type="button" class="slick-prev"><img src="img/arr-next.svg"></button>',
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 3,
-                    centerMode:true,
-                    centerPadding: '50px'
-                }
+
+    let aboutSlider = new Swiper('.about-slider__slider', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: '.about-slider__btn-next',
+            prevEl: '.about-slider__btn-prev',
+        },
+        breakpoints: {
+            1200: {
+                slidesPerView: 4
             },
-            {
-                breakpoint: 1024,
-                settings: {
-                    centerMode: false,
-                    slidesToShow: 3,
-                    centerPadding: '0px'
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 568,
-                settings: {
-                    slidesToShow: 1
-                }
+            500: {
+                slidesPerView: 2,
+                spaceBetween: 20
             }
-        ]
+        }
     });
+
 }

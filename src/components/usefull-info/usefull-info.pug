@@ -1,30 +1,40 @@
 mixin usefull-info-slide()
-    +e.slide
-        +e.item_top
-            div Новый корпус в ЖК "Фрегат 2"!
-            p Задача организации, в особенности же начало повседневной работы... Задача организации, в особенности же начало повседневной работы...
-            span 15 августа 2018
-        +e.item
-            div Новый корпус в ЖК "Фрегат 2"!
-            p Задача организации, в особенности же начало повседневной работы...
-            span 15 августа 2018
+    +e.slide.swiper-slide
+        div Новый корпус в ЖК "Фрегат 2"!
+        p Задача организации, в особенности же начало повседневной работы...
+        span 15 августа 2018
 
 
 +b.SECTION.usefull-info
-    +e.title-block.wrp
-        +e.title.h2 Полезная информация
-        +e.arrs
-    +e.slider.slider-wrp
-        +usefull-info-slide()
-        +e.slide
-            +e.item_top
-                div Новый корпус в ЖК "Фрегат 2"!
-                p мало текста
-                span 15 августа 2018
-            +e.item
-                div Новый корпус в ЖК "Фрегат 2"!
-                p мало текста
-                span 15 августа 2018
-        +usefull-info-slide()
-        +usefull-info-slide()
-        +usefull-info-slide()
+    +e.wrp.wrp
+        +e.title-block
+            +e.title.h2 Полезная информация
+            +e.arrs.arrs
+                +e.btn-prev
+                    img(src="img/arr-prev.svg")
+                +e.btn-next
+                    img(src="img/arr-next.svg")
+        +e.slider
+            .swiper-wrapper
+                +usefull-info-slide()
+                +e.slide.swiper-slide
+                    div Новый корпус в ЖК "Фрегат 2"!
+                    p мало текста
+                    span 15 августа 2018
+                +e.slide.swiper-slide
+                    div Новый корпус в ЖК "Фрегат 2"!
+                    p мало текста
+                    span 15 августа 2018
+                +e.slide.swiper-slide
+                    div Новый корпус в ЖК "Фрегат 2"!
+                    p МНОГО ТЕКСТА Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolorum ex excepturi explicabo ipsam quasi. Deserunt eaque harum maiores perferendis tenetur. Ab, aperiam aspernatur atque, beatae culpa dolorum error, fugit laboriosam officia quaerat quam quo ut vero? Dolores, ea quo. Nam, omnis, sapiente. Debitis enim et omnis porro repellat repudiandae!
+                    span 15 августа 2018
+                +usefull-info-slide()
+                +usefull-info-slide()
+                +usefull-info-slide()
+                +usefull-info-slide()
+                +usefull-info-slide()
+                +usefull-info-slide()
+                +usefull-info-slide()
+                +usefull-info-slide()
+                +usefull-info-slide()

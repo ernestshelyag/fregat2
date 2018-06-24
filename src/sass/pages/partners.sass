@@ -1,0 +1,42 @@
+.partners
+  padding-bottom: 50px
+  +rn
+    padding-bottom: 20px
+  &__title
+    margin-bottom: 33px
+  &__text-block
+    margin-bottom: 60px
+  &__list
+    display: flex
+    flex-wrap: wrap
+    a
+      text-decoration: none
+      width: 100%
+      +tr
+      &:hover
+        p
+          color: $font-col
+        div
+          border: solid 2px transparent
+          box-shadow: 0 3px 16px 0 rgba(21, 72, 158, 0.09)
+        span
+          text-decoration: underline
+    li
+      width: 20%
+      margin-bottom: 30px
+      text-align: center
+      padding: 0 5px
+    div
+      position: relative
+      height: 83px
+      border: solid 2px $sky-col
+      margin-bottom: 24px
+      overflow: hidden
+    img
+      +vcenter
+      height: 80%
+    p
+      margin-bottom: 10px
+      color: $font-col
+    span
+      color: $font-blue

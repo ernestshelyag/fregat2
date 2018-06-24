@@ -1,5 +1,56 @@
 - var courseTabs = ["2","3","4","5","6","7","8","9","10"]
 
+mixin courseHelper()
+    .swiper-wrapper
+        +e.slide.swiper-slide
+            +e.FIGURE.img-cont
+                +e.IMG.img(src="img/sunset.jpg")
+            +e.P.text 10 мая 2018
+        +e.slide.swiper-slide
+            +e.FIGURE.img-cont
+                +e.IMG.img(src="img/shares-family.jpg")
+            +e.P.text 10 мая 2018
+        +e.slide.swiper-slide
+            +e.FIGURE.img-cont
+                +e.IMG.img(src="img/course-slide.jpg")
+            +e.P.text 10 мая 2018
+        +e.slide.swiper-slide
+            +e.FIGURE.img-cont
+                +e.IMG.img(src="img/course-slide.jpg")
+            +e.P.text 10 мая 2018
+        +e.slide.swiper-slide
+            +e.FIGURE.img-cont
+                +e.IMG.img(src="img/course-slide.jpg")
+            +e.P.text 10 мая 2018
+        +e.slide.swiper-slide
+            +e.FIGURE.img-cont
+                +e.IMG.img(src="img/course-slide.jpg")
+            +e.P.text 10 мая 2018
+        +e.slide.swiper-slide
+            +e.FIGURE.img-cont
+                +e.IMG.img(src="img/course-slide.jpg")
+            +e.P.text 10 мая 2018
+        +e.slide.swiper-slide
+            +e.FIGURE.img-cont
+                +e.IMG.img(src="img/course-slide.jpg")
+            +e.P.text 10 мая 2018
+        +e.slide.swiper-slide
+            +e.FIGURE.img-cont
+                +e.IMG.img(src="img/course-slide.jpg")
+            +e.P.text 10 мая 2018
+        +e.slide.swiper-slide
+            +e.FIGURE.img-cont
+                +e.IMG.img(src="img/course-slide.jpg")
+            +e.P.text 10 мая 2018
+        +e.slide.swiper-slide
+            +e.FIGURE.img-cont
+                +e.IMG.img(src="img/course-slide.jpg")
+            +e.P.text 10 мая 2018
+        +e.slide.swiper-slide
+            +e.FIGURE.img-cont
+                +e.IMG.img(src="img/course-slide.jpg")
+            +e.P.text 10 мая 2018
+
 +b.SECTION.course-sliders
     +e.wrp.wrp
         +e.title.h2 Ход строительства
@@ -13,87 +64,90 @@
                     +e.LI.item(data-tab=`${item}`)
                         span Дом
                         span= `№${item}`
-    +e.sliders
-        +e.slider-block.active(data-content="1")
-            +e.arrs_1.wrp
-            +e.slider-top_1
-                figure
-                    img(src="img/course-slide.jpg")
-                    p 10 мая 2018
-                figure
-                    img(src="img/course-slide.jpg")
-                    p 10 мая 2018
-                figure
-                    img(src="img/course-slide.jpg")
-                    p 10 мая 2018
-                figure
-                    img(src="img/course-slide.jpg")
-                    p 10 мая 2018
-                figure
-                    img(src="img/course-slide.jpg")
-                    p 10 мая 2018
-                figure
-                    img(src="img/course-slide.jpg")
-                    p 10 мая 2018
-            +e.slider-bottom_1
-                figure
-                    img(src="img/course-slide.jpg")
-                    p 10 мая 2018
-                figure
-                    img(src="img/course-slide.jpg")
-                    p 10 мая 2018
-                figure
-                    img(src="img/course-slide.jpg")
-                    p 10 мая 2018
-                figure
-                    img(src="img/course-slide.jpg")
-                    p 10 мая 2018
-                figure
-                    img(src="img/course-slide.jpg")
-                    p 10 мая 2018
-                figure
-                    img(src="img/course-slide.jpg")
-                    p 10 мая 2018
-        each item in courseTabs
-            +e.slider-block(data-content=`${item}`)
-                +e.arrs.wrp(class=`course-sliders__arrs_${item}`)
-                +e.slider-top(class=`course-sliders__slider-top_${item}`)
-                    figure
-                        img(src="img/course-slide.jpg")
-                        p 10 мая 2018
-                    figure
-                        img(src="img/course-slide.jpg")
-                        p 10 мая 2018
-                    figure
-                        img(src="img/course-slide.jpg")
-                        p 10 мая 2018
-                    figure
-                        img(src="img/course-slide.jpg")
-                        p 10 мая 2018
-                    figure
-                        img(src="img/course-slide.jpg")
-                        p 10 мая 2018
-                    figure
-                        img(src="img/course-slide.jpg")
-                        p 10 мая 2018
-                +e.slider-bottom(class=`course-sliders__slider-bottom_${item}`)
-                    figure
-                        img(src="img/course-slide.jpg")
-                        p 10 мая 2018
-                    figure
-                        img(src="img/course-slide.jpg")
-                        p 10 мая 2018
-                    figure
-                        img(src="img/course-slide.jpg")
-                        p 10 мая 2018
-                    figure
-                        img(src="img/course-slide.jpg")
-                        p 10 мая 2018
-                    figure
-                        img(src="img/course-slide.jpg")
-                        p 10 мая 2018
-                    figure
-                        img(src="img/course-slide.jpg")
-                        p 10 мая 2018
+        +e.arrs
+            +e.btn-prev
+                img(src="img/arr-prev.svg")
+            +e.btn-next
+                img(src="img/arr-next.svg")
+        +e.sliders-block
+            +e.slider-cont.active(data-content="1")
+                +e.single-slider_1
+                    +courseHelper()
+
+            +e.slider-cont(data-content="2")
+                +e.single-slider_2
+                    .swiper-wrapper
+                        +e.slide.swiper-slide
+                            +e.FIGURE.img-cont
+                                +e.IMG.img(src="img/sunset.jpg")
+                            +e.P.text 10 мая 2018
+                        +e.slide.swiper-slide
+                            +e.FIGURE.img-cont
+                                +e.IMG.img(src="img/sunset.jpg")
+                            +e.P.text 10 мая 2018
+                        +e.slide.swiper-slide
+                            +e.FIGURE.img-cont
+                                +e.IMG.img(src="img/sunset.jpg")
+                            +e.P.text 10 мая 2018
+                        +e.slide.swiper-slide
+                            +e.FIGURE.img-cont
+                                +e.IMG.img(src="img/sunset.jpg")
+                            +e.P.text 10 мая 2018
+                        +e.slide.swiper-slide
+                            +e.FIGURE.img-cont
+                                +e.IMG.img(src="img/sunset.jpg")
+                            +e.P.text 10 мая 2018
+                        +e.slide.swiper-slide
+                            +e.FIGURE.img-cont
+                                +e.IMG.img(src="img/sunset.jpg")
+                            +e.P.text 10 мая 2018
+                        +e.slide.swiper-slide
+                            +e.FIGURE.img-cont
+                                +e.IMG.img(src="img/sunset.jpg")
+                            +e.P.text 10 мая 2018
+                        +e.slide.swiper-slide
+                            +e.FIGURE.img-cont
+                                +e.IMG.img(src="img/sunset.jpg")
+                            +e.P.text 10 мая 2018
+                        +e.slide.swiper-slide
+                            +e.FIGURE.img-cont
+                                +e.IMG.img(src="img/sunset.jpg")
+                            +e.P.text 10 мая 2018
+                        +e.slide.swiper-slide
+                            +e.FIGURE.img-cont
+                                +e.IMG.img(src="img/sunset.jpg")
+                            +e.P.text 10 мая 2018
+                        +e.slide.swiper-slide
+                            +e.FIGURE.img-cont
+                                +e.IMG.img(src="img/sunset.jpg")
+                            +e.P.text 10 мая 2018
+                        +e.slide.swiper-slide
+                            +e.FIGURE.img-cont
+                                +e.IMG.img(src="img/sunset.jpg")
+                            +e.P.text 10 мая 2018
+            +e.slider-cont(data-content="3")
+                +e.single-slider_3
+                    +courseHelper()
+            +e.slider-cont(data-content="4")
+                +e.single-slider_4
+                    +courseHelper()
+            +e.slider-cont(data-content="5")
+                +e.single-slider_5
+                    +courseHelper()
+            +e.slider-cont(data-content="6")
+                +e.single-slider_6
+                    +courseHelper()
+            +e.slider-cont(data-content="7")
+                +e.single-slider_7
+                    +courseHelper()
+            +e.slider-cont(data-content="8")
+                +e.single-slider_8
+                    +courseHelper()
+            +e.slider-cont(data-content="9")
+                +e.single-slider_9
+                    +courseHelper()
+            +e.slider-cont(data-content="10")
+                +e.single-slider_10
+                    +courseHelper()
 
     +e.A.btn.btn_white(href="#") Вся история

@@ -30,11 +30,11 @@ $(function () {
   select();
   courseSliders();
   calc();
-  aboutBlock();
   works();
   review();
-  // contactsBlock();
   usefullinfo();
+  aboutPage();
+  questions();
 
   svg4everybody();
 

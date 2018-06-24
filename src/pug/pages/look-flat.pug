@@ -1,0 +1,18 @@
+extends ../template
+
+block variables
+    - var title = 'Look'
+
+block content
+
+    +header()(class='col-sky')
+
+    +b.MAIN.look-flat.main
+        +e.wrp.wrp
+            +b.DIV.breadcrumbs
+                a(href="/") Главная
+                i /
+                a Посмотреть квартиры
+            +e.title.h1 Посмотреть квартиры
+
+    include ../../components/footer/footer

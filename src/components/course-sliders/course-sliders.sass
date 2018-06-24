@@ -10,6 +10,7 @@
   &__hidden
     display: none
   &__item
+    +tr
     cursor: pointer
     border: solid 2px $sky-col
     border-radius: 5px
@@ -27,46 +28,66 @@
       margin-right: 0
     &.active
       color: $font-blue
+      box-shadow: none
     span
       &:first-child
         padding-right: 5px
 
-  // sliders
-
-  &__sliders
-    margin: 25px auto 50px
-    max-width: 1280px
-    +rn
-      margin: 20px auto 30px
-  &__arrs
-    margin-bottom: 20px
-    text-align: right
-
-  &__slider-block
-    display: none
-    figure
-      height: 300px
-      position: relative
-      background-image: linear-gradient(to top, rgba(52, 46, 63, 0.79) 21%, transparent)
-      margin: 0 15px 30px
-    img
-      width: 100%
-      height: 100%
-      z-index: -1
-      object-fit: cover
-    p
-      font-size: 24px
-      font-weight: 600
-      color: #fff
-      position: absolute
-      bottom: 30px
-      left: 30px
-
-    &.active
-      display: block
-
   &__btn
     margin: auto
+
+  // sliders
+
+  &__arrs
+    margin-top: 30px
+    display: flex
+    justify-content: flex-end
+    div:last-child
+      margin-left: 20px
+
+  &__sliders-block
+    position: relative
+    margin: 25px auto 50px
+    height: 596px
+    +rn
+      margin: 20px auto 30px
+
+  &__slider-cont
+    width: 100%
+    transition: opacity .3s
+    +abs
+    opacity: 0
+    &.active
+      opacity: 1
+
+  &__single-slider
+    overflow: hidden
+
+  &__slide
+    position: relative
+    height: 283px
+    +br5
+  &__img-cont
+    height: 100%
+    +fc
+    overflow: hidden
+    background-image: linear-gradient(to top, rgba(52, 46, 63, 0.79) 21%, transparent)
+    z-index: 10
+  &__img
+    width: 100%
+    height: auto
+    border-radius: 5px
+    z-index: -1
+  &__text
+    position: absolute
+    font-size: 24px
+    font-weight: 600
+    color: #fff
+    bottom: 30px
+    left: 30px
+
+
+
 
 
 

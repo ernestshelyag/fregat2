@@ -7,6 +7,9 @@
     justify-content: space-between
     align-items: center
     margin-bottom: 26px
+  &__slider
+    overflow: hidden
+
   &__cont
     display: flex
     justify-content: space-between
@@ -14,12 +17,31 @@
     height: 427px
     flex-grow: 1
     margin-left: 30px
-    border-radius: 5px
-    overflow: hidden
+    +br5
+  &__img-list
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: flex-start
+    flex-wrap: wrap
+    height: 100%
+  &__img-link
+    +b
+    width: 147px
+    height: 132px
+    margin-bottom: 14px
+    +fc
+    &:first-child
+      height: 100%
+      width: 634px
+      margin-bottom: 0
+      margin-right: 15px
+    &:nth-child(4)
+      margin-bottom: 0
     img
       width: 100%
-      height: 100%
-      object-fit: cover // to do
+      height: auto
+      +br5
 
   &__list
     margin-top: 45px
@@ -37,7 +59,7 @@
   &__text
     font-size: 18px
 
-// slide
+// slide content
 
 .works-info-block
   width: 474px

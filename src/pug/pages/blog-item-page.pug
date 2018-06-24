@@ -1,0 +1,20 @@
+extends ../template
+
+block variables
+    - var title = 'Blog-item'
+
+block content
+
+    +header()(class='col-sky')
+
+    +b.MAIN.blog-item-page.main
+        +e.wrp.wrp
+            +b.DIV.breadcrumbs
+                a(href="/") Главная
+                i /
+                a(href="blog.html") Блог
+                i /
+                a Новый корпус
+            +e.title.h1 Новый корпус
+
+    include ../../components/footer/footer

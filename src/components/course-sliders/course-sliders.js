@@ -1,44 +1,103 @@
 function courseSliders() {
-    
-    for (let i = 1; i < 11 ; i++) {
 
-        let sliderTop = '.course-sliders__slider-top_' + i;
-        let sliderBottom = '.course-sliders__slider-bottom_' + i;
+    let courseSlider = new Swiper('.course-sliders__single-slider_1', {
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.course-sliders__btn-next',
+            prevEl: '.course-sliders__btn-prev',
+        },
+    });
 
-        $(sliderTop).slick({
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            dots: false,
-            autoplay: true,
-            autoplaySpeed: 3000,
-            asNavFor: '.course-sliders__slider-bottom_' + i,
-            appendArrows: '.course-sliders__arrs_' + i,
-            prevArrow: '<button type="button" class="slick-prev"><img src="img/arr-prev.svg"></button>',
-            nextArrow: '<button type="button" class="slick-prev"><img src="img/arr-next.svg"></button>',
-            responsive: [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                }
-            ]
-        });
-        $(sliderBottom).slick({
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            dots: false,
-            arrows: false,
-            asNavFor: '.course-sliders__slider-top_' + i,
-            responsive: [
-                {
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 2
-                    }
-                }
-            ]
-        });
-    }
+    let courseSlider2 = new Swiper('.course-sliders__single-slider_2', {
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.course-sliders__btn-next',
+            prevEl: '.course-sliders__btn-prev',
+        },
+    });
+
+    let courseSlider3 = new Swiper('.course-sliders__single-slider_3', {
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.course-sliders__btn-next',
+            prevEl: '.course-sliders__btn-prev',
+        },
+    });
+
+    let courseSlider4 = new Swiper('.course-sliders__single-slider_4', {
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.course-sliders__btn-next',
+            prevEl: '.course-sliders__btn-prev',
+        },
+    });
+
+    let courseSlider5 = new Swiper('.course-sliders__single-slider_5', {
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.course-sliders__btn-next',
+            prevEl: '.course-sliders__btn-prev',
+        },
+    });
+
+    let courseSlider6 = new Swiper('.course-sliders__single-slider_6', {
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.course-sliders__btn-next',
+            prevEl: '.course-sliders__btn-prev',
+        },
+    });
+
+    let courseSlider7 = new Swiper('.course-sliders__single-slider_7', {
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.course-sliders__btn-next',
+            prevEl: '.course-sliders__btn-prev',
+        },
+    });
+
+    let courseSlider8 = new Swiper('.course-sliders__single-slider_8', {
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.course-sliders__btn-next',
+            prevEl: '.course-sliders__btn-prev',
+        },
+    });
+
+    let courseSlider9 = new Swiper('.course-sliders__single-slider_9', {
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.course-sliders__btn-next',
+            prevEl: '.course-sliders__btn-prev',
+        },
+    });
+
+    let courseSlider10 = new Swiper('.course-sliders__single-slider_10', {
+        slidesPerView: 3,
+        slidesPerColumn: 2,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.course-sliders__btn-next',
+            prevEl: '.course-sliders__btn-prev',
+        },
+    });
 
 }

@@ -1,0 +1,89 @@
+.review-page
+  padding-bottom: 80px
+  +rn
+    padding-bottom: 40px
+  &__title
+    margin-bottom: 40px
+  &__cont
+    +flex
+    align-items: flex-start
+  &__content-block
+    flex-grow: 1
+  &__item
+    margin-bottom: 30px
+    background: $sky-col
+    padding: 30px
+    +flex
+
+  &__img-block
+    min-width: 188px
+    height: 205px
+    margin-right: 28px
+    +fc
+    +br5
+    img
+      width: 100%
+      height: auto
+  &__name
+    color: $font-blue
+    text-transform: uppercase
+    font-size: 18px
+    font-weight: bold
+    margin-bottom: 15px
+  &__date
+    margin-bottom: 20px
+    display: block
+  &__load-btn-block
+    text-align: center
+  &__load-btn
+    margin-top: 20px
+    cursor: pointer
+    font-size: 14px
+    color: $font-blue
+    font-weight: bold
+    text-transform: uppercase
+    +psevdo
+    &:before
+      +tr
+      right: -20px
+      top: -3px
+      width: 10px
+      height: 10px
+      border-bottom: solid 2px $font-blue
+      border-left: solid 2px $font-blue
+      transform: rotate(-45deg)
+    &:hover
+      color: $main-col
+      &:before
+        border-bottom: solid 2px $main-col
+        border-left: solid 2px $main-col
+
+  // form
+
+  &__form-block
+    border-radius: 5px
+    min-width: 435px
+    background: $sky-col
+    text-align: center
+    padding: 40px 52px
+    margin-left: 40px
+  &__form-title
+    margin-bottom: 30px
+  &__form
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__inp
+    margin-bottom: 10px
+    width: 100%
+  &__textarea
+    margin-bottom: 25px
+    width: 100%
+    max-width: 100%
+    min-width: 100%
+    min-height: 150px
+    border-radius: 20px
+    padding: 10px 30px
+    background: #fff
+    &.form-err
+      +b

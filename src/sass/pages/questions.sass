@@ -1,0 +1,101 @@
+.questions
+  padding-bottom: 80px
+  +rn
+    padding-bottom: 40px
+  &__title
+    margin-bottom: 40px
+  &__cont
+    +flex
+  &__questions-block
+    flex-grow: 1
+  &__callback-block
+    min-width: 405px
+    height: 327px
+    border: solid 2px $sky-col
+    +br5
+    margin-left: 40px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    position: relative
+    text-align: center
+    svg
+      fill: $sky-col
+      position: absolute
+      bottom: -10px
+      right: -120px
+      z-index: -1
+  &__cb-title
+    margin-bottom: 18px
+  &__cb-text
+    max-width: 250px
+    margin-bottom: 31px
+  &__cb-num
+    font-size: 24px
+    font-weight: bold
+    color: $font-blue
+    margin-bottom: 27px
+    &:hover
+      color: $main-col
+
+  // questions
+
+  &__item
+    margin-bottom: 20px
+    cursor: pointer
+    &.active
+      .questions__decor:before
+        right: -10px
+      .questions__decor:after
+        right: 12px
+
+  &__q-title-block
+    border-radius: 5px
+    background: $sky-col
+    padding: 23px 30px
+    +flex
+    align-items: center
+  &__q-title
+    line-height: 1.4
+    max-width: 80%
+    font-size: 18px
+    font-weight: bold
+    text-transform: uppercase
+    color: $font-blue
+
+  &__decor
+    display: block
+    width: 30px
+    height: 30px
+    background: #fff
+    border-radius: 50%
+    +shadow
+    +tr
+    +psevdo
+    &:before, &:after
+      width: 10px
+      height: 10px
+      +zero
+      top: -5px
+      transform: rotate(45deg)
+      transition: right .5s ease
+    &:before
+      border-bottom: solid 2px $main-col
+    &:after
+      border-right: solid 2px $main-col
+
+
+
+  &__content
+    display: none
+    margin-top: 10px
+    background: #f9fdff
+    padding: 30px
+    +br5
+
+
+
+
+
+

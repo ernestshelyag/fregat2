@@ -35,34 +35,148 @@
     padding: 40px 0 30px
   &__title
     margin-bottom: 30px
-  &__tabs-block
+  &__years-block
     display: flex
     justify-content: space-between
-  &__tab-item
-    //text-align: center
-    &.active
-      .history__num
-        background: $font-blue
-        color: #fff
-  &__year
+    margin-bottom: 15px
+    span
+      font-size: 18px
+      font-weight: bold
+      color: $font-blue
+
+  &__dots-block
+    height: 50px
+    margin-bottom: 35px
+    .swiper-pagination
+      display: flex
+      justify-content: space-between
+      +psevdo
+      &:before
+        width: 95%
+        +zero
+        height: 2px
+        background: $sky-col
+        z-index: -1
+
+    .swiper-pagination-bullet
+      opacity: 1
+      border: solid 2px $sky-col
+      border-radius: 50%
+      width: 40px
+      height: 40px
+      text-align: center
+      line-height: 40px
+      margin: 0 3px
+      background: #fff
+      color: $font-blue
+      font-size: 18px
+      font-weight: bold
+
+    .swiper-pagination-bullet-active
+      background: $font-blue
+      color: #fff
+
+
+  &__slider
+    overflow: hidden
+
+  &__cont
+    display: flex
+    justify-content: space-between
+  &__text-block
+    flex-grow: 1
+  &__img-block
+    height: 307px
+    min-width: 634px
+    margin-left: 55px
+    overflow: hidden
+    +br5
+    +fc
+    img
+      border-radius: 5px
+      overflow: hidden
+      width: 100%
+      height: auto
+           
+// certificate
+
+.certificate
+  padding: 80px 0
+  background: $sky-col
+  &__title-block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 30px
+  &__slider
+    overflow: hidden
+  &__slide
+    +fc
+    +br5
+    img
+      width: 100%
+      height: auto
+
+// about-info-block
+
+.about-info-block
+  padding: 80px 0
+  +rn
+    padding: 40px 0
+  &__lev
+    margin-bottom: 80px
+    display: flex
+    justify-content: space-between
+    +rn
+      margin-bottom: 40px
+    &_mid
+      flex-direction: row-reverse
+    &:last-child
+      margin-bottom: 0
+  &__item
+    min-width: 49%
+    flex-grow: 1
+    &_m
+      margin-left: 30px
+
+  &__img-block
+    display: block
+    height: 100%
+    max-height: 427px
+    max-width: 634px
+    border-radius: 5px
+    overflow: hidden
+    +fc
+    img
+      width: 100%
+      height: auto
+  &__title
     margin-bottom: 20px
+  &__content
     font-size: 18px
-    text-transform: uppercase
-    font-weight: bold
-    display: block
 
-
-  &__num
+  &__blue-text
     display: block
-    border: solid 2px $sky-col
-    border-radius: 50%
-    width: 40px
-    height: 40px
-    text-align: center
-    line-height: 40px
+    margin-top: 30px
     color: $font-blue
     font-size: 18px
-    font-weight: bold
+
+  &__link
+    margin-top: 30px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

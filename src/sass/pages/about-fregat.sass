@@ -1,0 +1,115 @@
+.about-fregat
+  &.main
+    margin-top: 0!important
+  &__hero
+    background-size: cover
+    position: relative
+    height: 100vh
+    text-align: center
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    color: #fff
+    figure
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      background-size: cover
+      background-position: center center
+      z-index: -1
+
+  &__hero-title
+    color: #fff
+    margin-bottom: 20px
+  &__hero-text
+    max-width: 850px
+
+// buttons
+
+.about-fregat-buttons
+  padding: 80px 0
+  +rn
+    padding: 40px 0
+  &__title
+    margin-bottom: 26px
+  &__text
+    width: 50%
+    margin-bottom: 28px
+  &__list
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__item
+    +tr
+    width: 18%
+    height: 123px
+    border: solid 2px $sky-col
+    margin-bottom: 30px
+    position: relative
+    overflow: hidden
+    &:hover
+      border: solid 2px transparent
+      box-shadow: 0 3px 16px 0 rgba(21, 72, 158, 0.09)
+  &__link
+    width: 100%
+    height: 100%
+    padding: 36px 10px 10px 30px
+  &__decor
+    position: absolute
+    font-size: 90px
+    font-weight: bold
+    color: $sky-col
+    z-index: -1
+    bottom: -20px
+    right: -10px
+    white-space: nowrap
+    user-select: none
+    +rt
+      font-size: 60px
+      bottom: -15px
+
+// main content
+
+.about-fregat-content
+  padding-bottom: 72px
+  +rn
+    padding-bottom: 35px
+  &__lev
+    +flex
+  &__item
+    height: 410px
+    width: 50%
+    &_tl
+      padding-right: 44px
+    &_tr
+      padding-left: 44px
+  &__title
+    margin: 50px 0 20px
+  &__content
+    ul
+      display: flex
+      flex-wrap: wrap
+    li
+      width: 30%
+      &:last-child
+        margin: 0 0 12px 15px!important
+    p
+      margin: 20px 0
+    sup
+      color: $font-blue
+      padding: 0 3px
+  &__link
+    margin-top: 20px
+
+  &__img-block
+    +br5
+    overflow: hidden
+    width: 100%
+    height: 100%
+    +fc
+    img
+      width: 100%
+      height: auto

@@ -1,0 +1,65 @@
+extends ../template
+
+block variables
+    - var title = 'Partners'
+
+block content
+
+    mixin partnersItem()
+        li
+            a(href="#")
+                div
+                    img(src="img/vtb.png")
+                p Дизайн, отделка интерьеров квартир, МОПов
+                span www.mikaz.net
+
+    +header()(class='col-sky')
+
+    +b.MAIN.partners.main
+        +e.wrp.wrp
+            +b.DIV.breadcrumbs
+                a(href="/") Главная
+                i /
+                a Партнеры
+            +e.title.h1 Партнеры
+            +e.text-block.html
+                p В своей деятельности мы придерживается максимальной прозрачности для любого, кто проявил интерес к нашей компании и к нашим продуктам. Одной из важнейших задач для нас является выбор будущих партнеров, в сотрудничестве с которыми мы оправдаем оказанное нам доверие со стороны наших покупателей.
+                p Процесс выбора партнеров строится на честной, конкурентной борьбе. Мы принимаем и изучаем предложения от разных компаний, выбираем лучшие из них. Приоритетом для нас является опыт, качество проводимых работ и поставляемых материалов.
+                p Мы приглашаем к сотрудничеству всех желающих. Если вы считаете, что ваши продукты и/или услуги могут быть полезны нам и нашим будущем жильцам, заполните форму в разделе тендеры.
+                p Ниже мы публикуем список действующих партнеров.
+            +e.UL.list
+                li
+                    a(href="#")
+                        div
+                            img(src="img/sber.png")
+                        p Дизайн
+                        span www.mikaz.net
+                li
+                    a(href="#")
+                        div
+                            img(src="img/sber.png")
+                        p Дизайн, отделка интерьеров квартир, МОПов Дизайн, отделка интерьеров квартир, МОПов Дизайн, отделка интерьеров квартир, МОПов
+                        span www.mikaz.net
+                li
+                    a(href="#")
+                        div
+                            //img(src="img/sber.png")
+                        p если вообще нет картинки
+                        span www.mikaz.net
+                li
+                    a(href="#")
+                        div
+                            img(src="img/logo.png")
+                        p Дизайн, отделка интерьеров квартир, МОПов
+                        span www.mikaz.net
+                +partnersItem()
+                +partnersItem()
+                +partnersItem()
+                +partnersItem()
+                +partnersItem()
+                +partnersItem()
+                +partnersItem()
+                +partnersItem()
+                +partnersItem()
+
+    include ../../components/footer/footer

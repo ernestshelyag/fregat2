@@ -1,0 +1,18 @@
+extends ../template
+
+block variables
+    - var title = 'Course'
+
+block content
+
+    +header()(class='col-sky')
+
+    +b.MAIN.course-page.main
+        +e.wrp.wrp
+            +b.DIV.breadcrumbs
+                a(href="/") Главная
+                i /
+                a Ход строительства
+            +e.title.h1 Ход строительства
+
+    include ../../components/footer/footer

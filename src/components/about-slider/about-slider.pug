@@ -14,34 +14,47 @@
     +e.wrp.wrp
         +e.title-block
             +e.title.h2 О проекте Фрегат 2
-            +e.arrs
+            +e.arrs.arrs
+                +e.btn-prev
+                    img(src="img/arr-prev.svg")
+                +e.btn-next
+                    img(src="img/arr-next.svg")
+
         +e.cont
             +e.info-block
                 +e.UL.list
                     each item in aboutSliderInfo
                         +e.LI.item
-                            div.h3= item.title
-                            p= item.text
-                            span= item.title
+                            +e.lil-title.h3= item.title
+                            +e.P.text= item.text
+                            +e.SPAN.decor= item.title
+
             +e.slider-block
-                +e.slider
-                    +e.FIGURE.slide(style="background-image: url(img/house-slider.jpg);")
-                        div.h3 Дом 1А
-                        p Сдан в 2007
-                    +e.FIGURE.slide(style="background-image: url(img/house-slider.jpg);")
-                        div.h3 Дом 2C
-                        p Сдан в 2009
-                    +e.FIGURE.slide(style="background-image: url(img/house-slider.jpg);")
-                        div.h3 Дом 3Щ
-                        p Сдан в 1903
-                    +e.FIGURE.slide(style="background-image: url(img/house-slider.jpg);")
-                        div.h3 Дом 4А
-                        p Сдан в 2010
-                    +e.FIGURE.slide(style="background-image: url(img/house-slider.jpg);")
-                        div.h3 Дом 5Щ
-                        p Сдан в 1903
-                    +e.FIGURE.slide(style="background-image: url(img/house-slider.jpg);")
-                        div.h3 Дом 6А
-                        p Сдан в 2010
-
-
+                +e.slider-cont
+                    +e.slider
+                        +e.SPAN.mask
+                        .swiper-wrapper
+                            +e.slide.swiper-slide(style="background-image: url(img/house-slider.jpg);")
+                                +e.slide-title.h3 Дом 1А
+                                +e.P.slide-text Сдан в 2007
+                            +e.slide.swiper-slide(style="background-image: url(img/house-slider.jpg);")
+                                +e.slide-title.h3 Дом 1А
+                                +e.P.slide-text Сдан в 2007
+                            +e.slide.swiper-slide(style="background-image: url(img/house-slider.jpg);")
+                                +e.slide-title.h3 Дом 1А
+                                +e.P.slide-text Сдан в 2007
+                            +e.slide.swiper-slide(style="background-image: url(img/house-slider.jpg);")
+                                +e.slide-title.h3 Дом 1А
+                                +e.P.slide-text Сдан в 2007
+                            +e.slide.swiper-slide(style="background-image: url(img/house-slider.jpg);")
+                                +e.slide-title.h3 Дом 1А
+                                +e.P.slide-text Сдан в 2007
+                            +e.slide.swiper-slide(style="background-image: url(img/house-slider.jpg);")
+                                +e.slide-title.h3 Дом 1А
+                                +e.P.slide-text Сдан в 2007
+                            +e.slide.swiper-slide(style="background-image: url(img/house-slider.jpg);")
+                                +e.slide-title.h3 Дом 1А
+                                +e.P.slide-text Сдан в 2007
+                            +e.slide.swiper-slide(style="background-image: url(img/house-slider.jpg);")
+                                +e.slide-title.h3 Дом 1А
+                                +e.P.slide-text Сдан в 2007

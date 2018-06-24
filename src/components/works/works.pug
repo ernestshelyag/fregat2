@@ -1,5 +1,5 @@
 mixin works-slide()
-    +e.slide
+    +e.slide.swiper-slide
         +e.cont
             +b.works-info-block
                 +e.top
@@ -37,18 +37,33 @@ mixin works-slide()
                         p Торговая марка года
 
             +e.img-block
-                img(src="img/works-big.jpg")
+                +e.img-list
+                    +e.A.img-link(href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg")
+                        img(src="img/works-big.jpg")
+                    +e.A.img-link(href="http://farm9.staticflickr.com/8382/8558295631_0f56c1284f_b.jpg")
+                        img(src="img/works-big.jpg")
+                    +e.A.img-link(href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg")
+                        img(src="img/works-small.jpg")
+                    +e.A.img-link(href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg")
+                        img(src="img/works-big.jpg")
+                    +e.A.img-link(href="http://farm9.staticflickr.com/8242/8558295633_f34a55c1c6_b.jpg")
+                        img(src="img/sunset.jpg")
 
 +b.SECTION.works
     +e.wrp.wrp
         +e.title-block
             +e.title.h2 Наши работы
-            +e.arrs
-        +e.slider-block
-            +works-slide()
-            +works-slide()
-            +works-slide()
-            +works-slide()
+            +e.arrs.arrs
+                +e.btn-prev
+                    img(src="img/arr-prev.svg")
+                +e.btn-next
+                    img(src="img/arr-next.svg")
+        +e.slider
+            .swiper-wrapper
+                +works-slide()
+                +works-slide()
+                +works-slide()
+                +works-slide()
 
         +e.UL.list
             +e.LI.item

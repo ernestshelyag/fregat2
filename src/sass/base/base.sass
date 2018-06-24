@@ -20,6 +20,7 @@ html
 
 
 #preloader
+  display: none
   position: fixed
   top: 0
   left: 0
@@ -52,12 +53,7 @@ body
 a
   +tr
   display: inline-block
-  color: $font-blue
-  &:hover
-    color: $main-col
-  &:active
-    color: $main-col-dark
-    
+  text-decoration: none
 
 p
   line-height: 1.33
@@ -71,12 +67,12 @@ svg
 
 // forms
 
-input, button
+input, button, textarea
   +main-font
   border: none
   background: transparent
   font-size: 16px
-input
+input, textarea
   color: $font-blue
 button
   cursor: pointer
@@ -100,11 +96,11 @@ button
 // wrapper
 
 .wrp
-  max-width: 1340px
+  max-width: 1360px
   margin: 0 auto
-  padding: 0 40px
+  padding: 0 30px
   +rt
-    max-width: 715px
+    max-width: 740px
     padding: 0 15px
 
 .slider-wrp

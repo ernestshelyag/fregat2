@@ -1,0 +1,71 @@
+extends ../template
+
+block variables
+    - var title = 'Questions'
+
+block content
+
+    +header()(class='col-sky')
+
+    +b.MAIN.questions.main
+        +e.wrp.wrp
+            +b.DIV.breadcrumbs
+                a(href="/") Главная
+                i /
+                a Вопрос-ответ
+            +e.title.h1 Вопрос-ответ
+            +e.cont
+                +e.questions-block
+                    +e.UL.list
+                        +e.LI.item
+                            +e.q-title-block
+                                +e.q-title Как добратся до Микрорайона Нейбута?
+                                +e.SPAN.decor
+                            +e.FIGURE.content.html
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam delectus officia perspiciatis recusandae! Aliquam architecto consequuntur dicta harum in laborum praesentium, quibusdam repellendus tenetur velit. Aspernatur consectetur consequatur cum dolorum eligendi enim hic ipsam itaque minus, nobis quam quibusdam quo quod, repellendus repudiandae totam voluptates! Animi nisi omnis recusandae?
+                        +e.LI.item
+                            +e.q-title-block
+                                +e.q-title Как добратся до Микрорайона Нейбута?
+                                +e.SPAN.decor
+
+                            +e.FIGURE.content.html
+                                ol
+                                    li Lorem ipsum dolor sit amet.
+                                    li lorem
+                                    li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad ex omnis ratione! Cum debitis ipsam ipsum quo repellat, voluptatem! Sunt!
+                                    li lorem
+                        +e.LI.item
+                            +e.q-title-block
+                                +e.q-title Как добратся до Микрорайона Нейбута?
+                                +e.SPAN.decor
+                            +e.FIGURE.content.html
+                                ul 4 лифта фирмы ottss
+                                    li lorem
+                                    li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab debitis dignissimos dolores eligendi ex excepturi inventore ipsum labore maiores maxime!
+                        +e.LI.item
+                            +e.q-title-block
+                                +e.q-title Как добратся до Микрорайона Нейбута?
+                                +e.SPAN.decor
+                            +e.FIGURE.content.html
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam delectus officia perspiciatis
+                        +e.LI.item
+                            +e.q-title-block
+                                +e.q-title Как добратся до Микрорайона Нейбута?
+                                +e.SPAN.decor
+                            +e.FIGURE.content.html
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam delectus officia perspiciatis
+                        +e.LI.item
+                            +e.q-title-block
+                                +e.q-title Где во Владивостоке расположен Микрорайон Нейбута? Как добратся до Микрорайона Нейбута?
+                                +e.SPAN.decor
+                            +e.FIGURE.content.html
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aperiam delectus officia perspiciatis
+
+                +e.callback-block
+                    +e.cb-title.h2 Нужна помощь?
+                    +e.P.cb-text Наши специалисты готов ответить на все ваши вопросы прямо сейчас
+                    +e.A.cb-num(href="tel:8495224405") 8 (495) 22 44 05
+                    +e.A.cb-btn.btn(href="#") Заказать звонок
+                    +icon("phone-big")
+
+    include ../../components/footer/footer

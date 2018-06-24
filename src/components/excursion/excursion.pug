@@ -10,15 +10,15 @@
                     +icon("mark")
                     +e.text-block
                         +e.lil-title.h5 Адрес объекта:
-                        p Гагарина 45
+                        +e.P.text Гагарина 45
                         +e.A.map-link(href="#") Смотреть на карте
                 +e.item
                     +icon("clock")
                     +e.text-block
                         +e.lil-title.h5 Время:
-                        p Ежедневно
-                        p 10:00 - 20:00
-            +e.FORM.form.form-callback(data-url="")
+                        +e.P.text Ежедневно
+                        +e.P.text 10:00 - 20:00
+            +e.FORM.form.form-callback(data-url="/")
                 input(type="hidden" value="Экскурсия")
                 +e.INPUT.inp.inp.inputmask(type="text" name="Телефон:" placeholder="Телефон" autocomplete="off")
                 +e.BUTTON.btn.btn(type="submit") Посетить объект
