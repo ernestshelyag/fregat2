@@ -5,6 +5,59 @@ block variables
 
 block content
 
+    - var courseTabs = ["2","3","4","5","6","7","8","9","10"]
+
+    mixin courseHelper()
+        .swiper-wrapper
+            +e.slide.swiper-slide
+                +e.FIGURE.img-cont
+                    +e.IMG.img(src="img/sunset.jpg")
+                +e.P.text 10 мая 2018
+            +e.slide.swiper-slide
+                +e.FIGURE.img-cont
+                    +e.IMG.img(src="img/shares-family.jpg")
+                +e.P.text 10 мая 2018
+            +e.slide.swiper-slide
+                +e.FIGURE.img-cont
+                    +e.IMG.img(src="img/course-slide.jpg")
+                +e.P.text 10 мая 2018
+            +e.slide.swiper-slide
+                +e.FIGURE.img-cont
+                    +e.IMG.img(src="img/course-slide.jpg")
+                +e.P.text 10 мая 2018
+            +e.slide.swiper-slide
+                +e.FIGURE.img-cont
+                    +e.IMG.img(src="img/course-slide.jpg")
+                +e.P.text 10 мая 2018
+            +e.slide.swiper-slide
+                +e.FIGURE.img-cont
+                    +e.IMG.img(src="img/course-slide.jpg")
+                +e.P.text 10 мая 2018
+            +e.slide.swiper-slide
+                +e.FIGURE.img-cont
+                    +e.IMG.img(src="img/course-slide.jpg")
+                +e.P.text 10 мая 2018
+            +e.slide.swiper-slide
+                +e.FIGURE.img-cont
+                    +e.IMG.img(src="img/course-slide.jpg")
+                +e.P.text 10 мая 2018
+            +e.slide.swiper-slide
+                +e.FIGURE.img-cont
+                    +e.IMG.img(src="img/course-slide.jpg")
+                +e.P.text 10 мая 2018
+            +e.slide.swiper-slide
+                +e.FIGURE.img-cont
+                    +e.IMG.img(src="img/course-slide.jpg")
+                +e.P.text 10 мая 2018
+            +e.slide.swiper-slide
+                +e.FIGURE.img-cont
+                    +e.IMG.img(src="img/course-slide.jpg")
+                +e.P.text 10 мая 2018
+            +e.slide.swiper-slide
+                +e.FIGURE.img-cont
+                    +e.IMG.img(src="img/course-slide.jpg")
+                +e.P.text 10 мая 2018
+
     +header()(class='col-sky')
 
     +b.MAIN.course-page.main
@@ -14,5 +67,78 @@ block content
                 i /
                 a Ход строительства
             +e.title.h1 Ход строительства
+
+            +e.tabs-block
+                +e.UL.list
+                    +e.SPAN.hidden Дом:
+                    +e.LI.item.active(data-tab="1")
+                        span Дом
+                        span №1
+                    each item in courseTabs
+                        +e.LI.item(data-tab=`${item}`)
+                            span Дом
+                            span= `№${item}`
+
+            +e.sliders-block
+                +e.slider-cont.active(data-content="1")
+                    +e.title-block
+                        +e.slider-title Продолжение работ по благоустройству
+                        +e.arrs.arrs
+                            +e.btn-prev_1-1
+                                img(src="img/arr-prev.svg")
+                            +e.btn-next_1-1
+                                img(src="img/arr-next.svg")
+                    +e.single-slider_1-1
+                        +courseHelper()
+                    +e.title-block
+                        +e.slider-title Благоустройство площадок, комплектация пожарных шкафов, финишная окраска лестничных маршей, фасад.
+                        +e.arrs.arrs
+                            +e.btn-prev_1-2
+                                img(src="img/arr-prev.svg")
+                            +e.btn-next_1-2
+                                img(src="img/arr-next.svg")
+                    +e.single-slider_1-2
+                        +courseHelper()
+                    +e.title-block
+                        +e.slider-title Устройство благоустройства верхних площадок, Отделка этажей МОПов
+                        +e.arrs.arrs
+                            +e.btn-prev_1-3
+                                img(src="img/arr-prev.svg")
+                            +e.btn-next_1-3
+                                img(src="img/arr-next.svg")
+                    +e.single-slider_1-3
+                        +courseHelper()
+
+
+                +e.slider-cont(data-content="2")
+                    span test
+                    //+e.single-slider_3
+                    //    +courseHelper()
+
+
+                //+e.slider-cont(data-content="3")
+                //    +e.single-slider_3
+                //        +courseHelper()
+                //+e.slider-cont(data-content="4")
+                //    +e.single-slider_4
+                //        +courseHelper()
+                //+e.slider-cont(data-content="5")
+                //    +e.single-slider_5
+                //        +courseHelper()
+                //+e.slider-cont(data-content="6")
+                //    +e.single-slider_6
+                //        +courseHelper()
+                //+e.slider-cont(data-content="7")
+                //    +e.single-slider_7
+                //        +courseHelper()
+                //+e.slider-cont(data-content="8")
+                //    +e.single-slider_8
+                //        +courseHelper()
+                //+e.slider-cont(data-content="9")
+                //    +e.single-slider_9
+                //        +courseHelper()
+                //+e.slider-cont(data-content="10")
+                //    +e.single-slider_10
+                //        +courseHelper()
 
     include ../../components/footer/footer

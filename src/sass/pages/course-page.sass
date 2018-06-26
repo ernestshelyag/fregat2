@@ -1,1 +1,90 @@
 .course-page
+  padding-bottom: 80px
+  +rn
+    padding-bottom: 40px
+  &__title
+    margin-bottom: 28px
+  &__list
+    display: flex
+    justify-content: space-between
+    margin-bottom: 30px
+  &__hidden
+    display: none
+  &__item
+    +tr
+    cursor: pointer
+    border: solid 2px $sky-col
+    border-radius: 5px
+    box-shadow: 0 3px 16px 0 rgba(21, 72, 158, 0.09)
+    flex-grow: 1
+    margin-right: 10px
+    font-size: 18px
+    font-weight: 600
+    text-transform: uppercase
+    height: 63px
+    line-height: 63px
+    color: $font-col-light
+    text-align: center
+    &:last-child
+      margin-right: 0
+    &.active
+      color: $font-blue
+      box-shadow: none
+    span
+      &:first-child
+        padding-right: 5px
+
+  // sliders
+
+  &__title-block
+    +flex
+    align-items: center
+    margin-bottom: 20px
+  &__arrs
+    z-index: 100
+
+  &__slider-title
+    font-size: 18px
+    text-transform: uppercase
+    color: $font-blue
+    font-weight: 600
+
+  &__sliders-block
+    position: relative
+    margin: 0 auto
+    height: 1017px
+
+  &__slider-cont
+    width: 100%
+    transition: opacity .3s
+    +abs
+    opacity: 0
+    &.active
+      opacity: 1
+
+  &__single-slider
+    overflow: hidden
+    margin-bottom: 20px
+
+  &__slide
+    position: relative
+    height: 283px
+    +br5
+  &__img-cont
+    height: 100%
+    +fc
+    overflow: hidden
+    background-image: linear-gradient(to top, rgba(52, 46, 63, 0.79) 1%, transparent, transparent)
+    z-index: 10
+  &__img
+    width: 100%
+    height: auto
+    border-radius: 5px
+    z-index: -1
+  &__text
+    position: absolute
+    font-size: 24px
+    font-weight: 600
+    color: #fff
+    bottom: 30px
+    left: 30px

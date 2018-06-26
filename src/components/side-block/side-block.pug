@@ -1,0 +1,38 @@
++b.side-block
+    +e.socials
+        +e.socials-title.h3 Читайте нас в социальных сетях!
+        +e.UL.socials-list
+            each item in headerSocials
+                +e.LI.socials-item
+                    a(href=`${item.link}`)
+                        +icon(item.icon)
+    +e.mail-form
+        +e.mail-title.h3 Новости, события, полезные статьи
+        +e.FORM.form.form-mail(data-url="/")
+            input(type="hidden" value="хочу быть в теме!")
+            +e.INPUT.inp.inp.inp-text(type="email" name="Имя:" placeholder="Имя" autocomplete="off")
+            +e.BUTTON.btn.btn(type="submit") хочу быть в теме!
+    +e.articles
+        +e.title.h3 Популярные статьи
+        +e.UL.list
+            +e.LI.item
+                +e.SPAN.date 15 августа 2018
+                +e.P.text Задача организации, в особенности же начало повседневной работы..
+            +e.LI.item
+                +e.SPAN.date 15 августа 2018
+                +e.P.text Задача организации, в особенности же начало повседневной работы..
+            +e.LI.item
+                +e.SPAN.date 15 августа 2018
+                +e.P.text Задача организации, в особенности же начало повседневной работы..
+    +e.news
+        +e.title.h3 Последние новости
+        +e.UL.list
+            +e.LI.item
+                +e.SPAN.date 15 августа 2018
+                +e.lil-title Задача организации, в особенности начало...
+            +e.LI.item
+                +e.SPAN.date 15 августа 2018
+                +e.lil-title Задача организации, в особенности начало...
+            +e.LI.item
+                +e.SPAN.date 15 августа 2018
+                +e.lil-title Задача организации, в особенности начало...

@@ -1,0 +1,50 @@
+.pagination
+  margin-top: 35px
+  +flex
+
+
+  &__item
+    color: $font-blue
+    font-size: 18px
+    font-weight: 600
+    margin: 0 15px
+    +psevdo
+    &_prev, &_next
+      flex-grow: 1
+      text-transform: uppercase
+      color: $main-col
+      text-decoration: none
+      font-weight: bold
+
+      &:before
+        width: 7px
+        height: 7px
+        border-top: solid 2px $main-col
+        border-right: solid 2px $main-col
+        transform: rotate(45deg)
+        top: 4px
+    &_prev
+      &:before
+        left: -15px
+        transform: rotate(-135deg)
+    &_next
+      text-align: right
+      padding-left: 15px
+      &:before
+        right: -15px
+        transform: rotate(45deg)
+    &:hover
+      color: $main-col
+
+    &.active
+      color: #fff
+      &:after
+        width: 25px
+        height: 25px
+        background: $main-col
+        border-radius: 50%
+        z-index: -1
+        +vcenter
+      &:hover
+        color: #fff
+

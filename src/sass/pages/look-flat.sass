@@ -1,1 +1,230 @@
 .look-flat
+  padding-bottom: 80px
+  +rm
+    padding-bottom: 40px
+  &__title
+    margin-bottom: 30px
+  &__text
+    margin-bottom: 37px
+  &__tab-list
+    +flex
+    margin-bottom: 30px
+
+  &__tab-item
+    width: 19%
+    border: solid 2px $sky-col
+    cursor: pointer
+    +tr
+    +fc
+    text-align: center
+    height: 73px
+    color: $font-blue
+    text-transform: uppercase
+    font-size: 18px
+    font-weight: bold
+    &.active
+      border: solid 2px transparent
+      box-shadow: 0 3px 16px 0 rgba(21, 72, 158, 0.09)
+
+  // content
+
+  &__content-block
+    margin-bottom: 80px
+    +rn
+      margin-bottom: 40px
+  &__cont
+    display: none
+    &.active
+      display: block
+  &__block
+    +flex
+  &__item
+    width: 32%
+    border: solid 2px rgba($font-col, .3)
+    +br5
+  &__img-block
+    height: 250px
+    width: 100%
+    +fc
+    overflow: hidden
+    position: relative
+    img
+      width: 100%
+      height: auto
+    svg
+      transition: opacity .3s
+      fill: #fff
+      +vcenter
+      z-index: 20
+    .loup
+      width: 33px
+      height: 34px
+      opacity: 0
+    &:hover
+      span, svg
+        opacity: 1
+  &__mask
+    transition: opacity .3s
+    +abs
+    background-image: linear-gradient(to top, rgba(52, 46, 63, 0.79), transparent)
+    z-index: 10
+    opacity: 0
+  &__info-block
+    padding: 30px
+  &__item-title
+    font-size: 18px
+    text-transform: uppercase
+    color: $font-blue
+    font-weight: bold
+    margin-bottom: 24px
+  &__box
+    border-top: solid 2px $sky-col
+    padding-top: 25px
+    +flex
+    margin-bottom: 33px
+  &__lil-title
+    font-size: 12px
+    text-transform: uppercase
+    font-weight: 600
+    margin-bottom: 8px
+  &__value
+    font-size: 18px
+    color: $font-blue
+  &__item-btn
+    margin: auto
+
+// modal
+
+.look-flat-modal
+  padding: 30px
+  max-width: 935px
+  margin: 0 auto
+  position: relative
+  border-radius: 5px
+  background: $sky-col
+  &__title-block
+    +flex
+    align-items: center
+    margin-bottom: 20px
+  &__slider
+    overflow: hidden
+  &__cont
+    display: flex
+  &__img-block
+    margin-right: 10px
+    min-width: 368px
+    height: 340px
+    +fc
+    overflow: hidden
+    img
+      width: 100%
+      height: auto
+  &__info-block
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+  &__top
+    +flex
+    margin-bottom: 10px
+  &__small-img-block
+    +br5
+    +fc
+    overflow: hidden
+    width: 24%
+    height: 110px
+    img
+      width: 100%
+      height: auto
+  &__bottom
+    flex-grow: 1
+    padding: 30px
+    border-radius: 5px
+    border: solid 2px $sky-col-med
+  &__list
+    +flex
+    margin-bottom: 20px
+
+  &__lil-title
+    font-size: 12px
+    text-transform: uppercase
+    font-weight: 600
+    margin-bottom: 8px
+  &__value
+    font-size: 18px
+    color: $font-blue
+  &__about-btn
+    float: right
+    margin-top: 20px
+    font-size: 14px
+    font-weight: bold
+    text-transform: uppercase
+    color: $main-col
+
+  &__form-block
+    margin-top: 10px
+    text-align: center
+    border-radius: 5px
+    border: solid 2px $sky-col-med
+    height: 220px
+    display: flex
+    flex-direction: column
+    justify-content: center
+  &__form-title
+    margin-bottom: 23px
+  &__lev
+    display: flex
+    justify-content: center
+  &__inp
+    margin-right: 15px
+    &.inp-text
+      margin-right: 10px
+  &__callback-text
+    margin-top: 19px
+    sup
+      padding-left: 3px
+      color: $main-col
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

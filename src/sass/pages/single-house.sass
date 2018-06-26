@@ -1,0 +1,96 @@
+.single-house
+  padding-bottom: 80px
+  +rn
+    padding-bottom: 40px
+  &__top
+    margin-bottom: 30px
+  &__img-block
+    margin-left: 40px
+    margin-bottom: 20px
+    float: right
+    +fc
+    overflow: hidden
+    +br5
+    width: 649px
+    height: 465px
+    img
+      width: 100%
+      height: auto
+  &__title
+    margin-bottom: 37px
+  &__info-block
+    padding-bottom: 20px
+    border-bottom: solid 2px $sky-col
+    margin-bottom: 30px
+    +flex
+  &__box
+    +flex
+  &__item
+    &:first-child
+      margin-right: 50px
+  &__lil-title
+    text-transform: uppercase
+    margin-bottom: 8px
+    font-size: 12px
+    font-weight: 600
+  &__value
+    font-size: 18px
+    color: $font-blue
+  &__btn
+    width: 240px
+
+  &__bottom
+    +flex
+
+  &__video-link
+    min-width: 649px
+    height: 380px
+    position: relative
+    margin-right: 30px
+    +fc
+    +br5
+    img
+      width: 100%
+      height: auto
+
+  &__mask
+    +abs
+    z-index: 10
+    background-image: linear-gradient(to top, rgba(52, 46, 63, 0.79) 1%, transparent, transparent)
+  &__decor
+    +tr
+
+    +vcenter
+    width: 60px
+    height: 60px
+    border-radius: 50px
+    background: #fff
+    +shadow
+    &:before
+      position: absolute
+      content: ''
+      +arr(16, 20, $main-col, r)
+      +zero
+      left: 5px
+    &:hover
+      border: solid 2px $main-col
+
+  &__content
+    flex-grow: 1
+
+.single-house-modal
+  padding: 30px
+  &__title
+    margin-bottom: 20px
+  li
+    color: $font-blue!important
+    text-decoration: underline
+    &:before
+      bottom: auto!important
+      top: 7px!important
+
+
+
+
+
+

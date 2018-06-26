@@ -5,6 +5,67 @@ block variables
 
 block content
 
+    mixin lookFlatItem()
+        +e.item
+            +e.A.img-block.img-modal(href="img/works-big.jpg")
+                img(src="img/works-small.jpg")
+                +e.SPAN.mask
+                +icon("loup")
+            +e.info-block
+                +e.item-title дом №1
+                +e.box
+                    +e.box-item
+                        +e.lil-title Площадь
+                        +e.SPAN.value 65.2 м2 - 85.2 м2
+                    +e.box-item
+                        +e.lil-title Цена
+                        +e.SPAN.value 10 256 280 руб.
+                +e.item-btn.btn_white.simple-modal(href="#flat-modal-1") Подробнее о квартирах
+
+    mixin lookFlatModalSlide()
+        +e.slide.swiper-slide
+            +e.cont
+                +e.FIGURE.img-block
+                    img(src="img/works-small.jpg")
+                +e.info-block
+                    +e.top
+                        +e.small-img-block
+                            img(src="img/works-small.jpg")
+                        +e.small-img-block
+                            img(src="img/works-small.jpg")
+                        +e.small-img-block
+                            img(src="img/works-small.jpg")
+                        +e.small-img-block
+                            img(src="img/works-small.jpg")
+                    +e.bottom
+                        +e.UL.list
+                            +e.LI.item
+                                +e.lil-title Цена
+                                +e.SPAN.value 29.1
+                            +e.LI.item
+                                +e.lil-title Площадь
+                                +e.SPAN.value 14.7 м2
+                            +e.LI.item
+                                +e.lil-title Цена
+                                +e.SPAN.value 29.1
+                            +e.LI.item
+                                +e.lil-title Цена
+                                +e.SPAN.value 29.1
+                        +e.UL.list
+                            +e.LI.item
+                                +e.lil-title Цена
+                                +e.SPAN.value 29.1
+                            +e.LI.item
+                                +e.lil-title Площадь
+                                +e.SPAN.value 14.7 м2
+                            +e.LI.item
+                                +e.lil-title Цена
+                                +e.SPAN.value 29.1
+                            +e.LI.item
+                                +e.lil-title Цена
+                                +e.SPAN.value 29.1
+                        +e.A.about-btn(href="ipoteka.html") подробнее об ипотеке
+
     +header()(class='col-sky')
 
     +b.MAIN.look-flat.main
@@ -14,5 +75,69 @@ block content
                 i /
                 a Посмотреть квартиры
             +e.title.h1 Посмотреть квартиры
+            +e.P.text Квартиры в ЖК Фрегат 2 отличаются удобной и продуманной планировкой. Увеличенный световой фронт, оптимальные площади для жильцов, зонирование помещений под собственные нужды.
+
+            +e.tabs-block
+                +e.UL.tab-list
+                    +e.LI.tab-item.active(data-tab-fade="1") Однокомнатные квартиры
+                    +e.LI.tab-item(data-tab-fade="2") Двухкомнатные квартиры
+                    +e.LI.tab-item(data-tab-fade="3") Квартиры-студии
+                    +e.LI.tab-item(data-tab-fade="4") Квартиры с отделкой
+                    +e.LI.tab-item(data-tab-fade="5") Эксклюзивные планировки
+            +e.content-block
+                +e.cont.active(data-content-fade="1")
+                    +e.block
+                        +lookFlatItem()
+                        +lookFlatItem()
+                        +lookFlatItem()
+                +e.cont(data-content-fade="2")
+                    +e.block
+                        +lookFlatItem()
+                        +lookFlatItem()
+                        +lookFlatItem()
+                +e.cont(data-content-fade="3")
+                    +e.block
+                        +lookFlatItem()
+                        +lookFlatItem()
+                        +lookFlatItem()
+                +e.cont(data-content-fade="4")
+                    +e.block
+                        +lookFlatItem()
+                        +lookFlatItem()
+                        +lookFlatItem()
+                +e.cont(data-content-fade="5")
+                    +e.block
+                        +lookFlatItem()
+                        +lookFlatItem()
+                        +lookFlatItem()
+
+            +e.text-bottom.html
+                p Повседневная практика показывает, что сложившаяся структура организации позволяет выполнять важные задания по разработке модели развития. Задача организации, в особенности же рамки и место обучения кадров позволяет выполнять важные задания по разработке существенных финансовых и административных условий.
+                p Равным образом постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке форм развития. Равным образом укрепление и развитие структуры позволяет оценить значение направлений прогрессивного развития. Таким образом постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что укрепление и развитие структуры способствует подготовки и реализации новых предложений.
 
     include ../../components/footer/footer
+
+    +b.look-flat-modal.mfp-hide#flat-modal-1
+        +e.title-block
+            +e.title.h2 Однокомнатные квартиры 65.2 м2   Дом №2
+            +e.arrs.arrs
+                +e.btn-prev
+                    img(src="img/arr-prev.svg")
+                +e.btn-next
+                    img(src="img/arr-next.svg")
+        +e.slider-block
+            +e.slider
+                .swiper-wrapper
+                    +lookFlatModalSlide()
+                    +lookFlatModalSlide()
+        +e.form-block
+            +e.form-title.h3 Успейте забронировать квартиру!
+            +e.FORM.form.contacts-page-form(data-url="/")
+                +e.lev
+                    input(type="hidden" value="Свяжитесь с нами:")
+                    +e.INPUT.inp.inp.inp-text(type="text" name="Имя:" placeholder="Имя" autocomplete="off")
+                    +e.INPUT.inp.inp.inputmask(type="text" name="Телефон:" placeholder="Телефон" autocomplete="off")
+                    +e.BUTTON.btn.btn(type="submit") Отправить
+                +e.P.callback-text
+                    sup *
+                    | Наш менеджер перезвонит вам в течение 2 минут и ответит на все вопросы

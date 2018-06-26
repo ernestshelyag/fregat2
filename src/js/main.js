@@ -11,6 +11,10 @@ $('[data-tab]').on('click', function () {
     $(this).addClass('active').siblings('[data-tab]').removeClass('active');
     $('[data-content=' + $(this).data('tab') + ']').addClass('active').siblings('[data-content]').removeClass('active');
 });
+$('[data-tab-fade]').on('click', function () {
+    $(this).addClass('active').siblings('[data-tab-fade]').removeClass('active');
+    $('[data-content-fade=' + $(this).data('tab-fade') + ']').fadeIn().siblings('[data-content-fade]').hide();
+});
 // num spaces
 function numSpaces(n) {
     n += "";
@@ -35,6 +39,8 @@ $(function () {
   usefullinfo();
   aboutPage();
   questions();
+  coursePage();
+  lookFlat();
 
   svg4everybody();
 

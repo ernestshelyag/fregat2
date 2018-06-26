@@ -5,6 +5,12 @@ block variables
 
 block content
 
+    mixin newsItem()
+        +e.LI.item
+            +e.SPAN.date 15 августа 2018
+            +e.lil-title Задача организации, в особенности начало повседневной работы
+            +e.P.text Задача организации, в особенности начало повседневной работы по формированию пози Задача организации, в особенности начало повседневной работы по формированию пози Задача организации, в особенности начало повседневной работы по формированию пози
+
     +header()(class='col-sky')
 
     +b.MAIN.news-page.main
@@ -14,5 +20,20 @@ block content
                 i /
                 a СМИ о нас
             +e.title.h1 СМИ о нас
+            +e.cont
+                +e.content-block
+                    +e.UL.list
+                        +newsItem()
+                        +newsItem()
+                        +newsItem()
+                        +newsItem()
+                        +newsItem()
+                        +newsItem()
+                        +newsItem()
+
+                    include ../../components/pagination/pagination
+
+                +e.side-block
+                    include ../../components/side-block/side-block
 
     include ../../components/footer/footer

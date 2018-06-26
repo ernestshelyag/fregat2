@@ -1,6 +1,6 @@
 function sendForm() {
 
-    let phonePattern = /^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{3,10}$/;
+    let phonePattern = /^\d/;
 
     function modalSuccess () {
         $.magnificPopup.open({
@@ -24,10 +24,11 @@ function sendForm() {
         $(this).removeClass('form-err');
     });
 
-    $('.inputmask').inputmask({
-        mask: '+7(999)999-99-99',
-        showMaskOnHover: false
-    });
+    // $('.inputmask').inputmask({
+    //     mask: '+7(999)999-99-99',
+    //     showMaskOnHover: false
+    // });
+
     $('.inputmask').on('input', function () {
         if (phonePattern.test($(this).val())) {
             $(this).removeClass('form-err');
@@ -93,7 +94,7 @@ function sendForm() {
         }
     });
 
-    // review form
+    // contact page form
 
     $('.contacts-page-form').submit(function (e) {
         let name = $(this).find('.inp-text');
@@ -110,6 +111,32 @@ function sendForm() {
             errorFlag = true;
         } else if (!validatePhone(phone) || phone.val() === '') {
             phone.addClass('form-err');
+            errorFlag = true;
+        } else {
+            errorFlag = false;
+        }
+        if (!errorFlag) {
+            $.ajax({
+                url: this.dataset.url,
+                type: "post",
+                data: data,
+                success: function () {
+                    $(this)[0].reset();
+                    modalSuccess();
+                }
+            });
+        }
+    });
+
+    // review form
+
+    $('.form-mail').submit(function (e) {
+        let mail = $(this).find('.inp');
+        let errorFlag = false;
+        let data = $(this).serialize();
+        e.preventDefault();
+        if (mail.val() === '') {
+            mail.addClass('form-err');
             errorFlag = true;
         } else {
             errorFlag = false;
