@@ -140,6 +140,7 @@
 
 .html
   a
+    padding: 0 5px
     color: $font-blue
     text-decoration: underline!important
     &:hover
@@ -192,6 +193,62 @@
         color: $font-blue
         font-size: 18px
         font-weight: bold
+
+  table
+    width: 100%
+    table-layout: fixed
+    text-align: center
+
+    th, td
+      padding: 25px 10px
+
+
+
+
+      border: solid 2px $sky-col-med
+      color: $font-col
+
+    th
+      background: $sky-col
+      color: $font-blue
+      font-weight: 600
+
+
+  blockquote
+    padding: 20px 0
+    p
+      font-style: italic
+      padding-left: 25px
+      +psevdo
+      &:before
+        height: 110%
+        width: 5px
+        border-radius: 2px
+        background: $font-blue
+        left: 0
+        top: 50%
+        transform: translate(0, -50%)
+    div
+      text-transform: uppercase
+      color: $font-blue
+      font-size: 18px
+      padding-left: 60px
+      position: relative
+      font-weight: 600
+      margin-bottom: 10px
+      &:before
+        position: absolute
+        content: '“'
+        font-size: 100px
+        color: $sky-col
+        left: 10px
+        top: -18px
+    span
+      padding-left: 60px
+
+
+
+
 
 
 

@@ -1,0 +1,27 @@
+extends ../template
+
+block variables
+    - var title = 'News'
+
+block content
+
+    +header()(class='col-sky')
+
+    +b.MAIN.single-news.main
+        +e.wrp.wrp
+            +b.DIV.breadcrumbs
+                a(href="/") Главная
+                i /
+                a(href="news-page.html") Новости
+                i /
+                a Какая-то новость
+            +e.title.h1 Какая-то новость
+
+            +e.cont
+                +e.content-block
+                    span cont
+
+                +e.side-block
+                    include ../../components/side-block/side-block
+
+    include ../../components/footer/footer

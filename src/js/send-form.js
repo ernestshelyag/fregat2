@@ -1,6 +1,6 @@
 function sendForm() {
 
-    let phonePattern = /^\d/;
+    // let phonePattern = /^\d/;
 
     function modalSuccess () {
         $.magnificPopup.open({
@@ -20,7 +20,7 @@ function sendForm() {
         setTimeout(fun, 2000);
     }
 
-    $('.inp-text').on('input', function () {
+    $('.inp-text, .inputmask').on('input', function () {
         $(this).removeClass('form-err');
     });
 
@@ -29,10 +29,12 @@ function sendForm() {
     //     showMaskOnHover: false
     // });
 
-    $('.inputmask').on('input', function () {
-        if (phonePattern.test($(this).val())) {
-            $(this).removeClass('form-err');
-        }
+    $('.inputmask').on('keyup', function () {
+
+        let v = $(this).val(),
+            r = v.replace(/[^\[0-9]*/giu, '');
+        $(this).val(r);
+
     });
 
     // callback form
@@ -41,11 +43,9 @@ function sendForm() {
         let phone = $(this).find('.inp');
         let errorFlag = false;
         let data = $(this).serialize();
-        let validatePhone = () => {
-            return (phonePattern.test(phone.val()))
-        };
+
         e.preventDefault();
-        if (!validatePhone(phone) || phone.val() === '') {
+        if (phone.val() === '') {
             phone.addClass('form-err');
             errorFlag = true;
         } else {

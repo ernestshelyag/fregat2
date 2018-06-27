@@ -1,0 +1,122 @@
+.single-blog
+  padding-bottom: 80px
+  +rn
+    padding-bottom: 40px
+  &__title
+    margin-bottom: 40px
+    +rn
+      margin-bottom: 20px
+  &__cont
+    +flex
+    align-items: flex-start
+  &__side-block
+    width: 340px
+    min-width: 340px
+    margin-left: 40px
+  &__content-block
+    flex-grow: 1
+  &__top
+    margin-bottom: 40px
+    border-bottom: solid 2px $sky-col
+    padding-bottom: 10px
+  &__top-img-block
+    width: 100%
+    height: 380px
+    +fc
+    overflow: hidden
+    margin-bottom: 25px
+    img
+      width: 100%
+      height: auto
+  &__top-info
+    +flex
+    align-items: center
+  &__nums-block
+    +flex
+    align-items: center
+    svg
+      fill: $font-col
+    .eye
+      width: 23px
+      height: 13px
+    .clouds
+      width: 22px
+      height: 17px
+  &__date
+    margin-right: 30px
+  &__nums-item
+    padding-left: 10px
+    +flex
+    align-items: center
+    span
+      padding-left: 8px
+      color: $font-col
+  &__content
+    padding-bottom: 40px
+  &__content-title
+    padding: 25px 0
+  &__img-block
+    width: 100%
+    height: 380px
+    +fc
+    overflow: hidden
+    +br5
+    img
+      width: 100%
+      height: auto
+
+  &__video-link
+    width: 100%
+    height: 380px
+    position: relative
+    margin-right: 30px
+    +fc
+    +br5
+    img
+      width: 100%
+      height: auto
+  &__mask
+    +abs
+    z-index: 10
+    background-image: linear-gradient(to top, rgba(52, 46, 63, 0.79) 1%, transparent, transparent)
+  &__decor
+    +tr
+    +vcenter
+    width: 60px
+    height: 60px
+    border-radius: 50px
+    background: #fff
+    +shadow
+    &:before
+      position: absolute
+      content: ''
+      +arr(16, 20, $main-col, r)
+      +zero
+      left: 5px
+    &:hover
+      border: solid 2px $main-col
+
+  &__likes-block
+    margin-top: 20px
+    margin-bottom: 40px
+    padding-bottom: 10px
+    border-bottom: solid 2px $sky-col
+    +flex
+    align-items: baseline
+  &__likes-text-block
+
+  &__likes-title
+    margin-right: 37px
+
+  &__likes-item
+    +b
+    svg
+      fill: $font-col
+      width: 25px
+      height: 23px
+    &_dis
+      margin-left: 20px
+
+
+
+
